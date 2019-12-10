@@ -22,8 +22,8 @@ IL2CPP_EXTERN_C_END
 
 // 0x00000001 System.Void DragObject::OnMouseDown()
 extern void DragObject_OnMouseDown_m130DDBA9789C86876AC3410E8EFB324E2D3D2CFA ();
-// 0x00000002 UnityEngine.Vector3 DragObject::GetMouseAsWorldPoint()
-extern void DragObject_GetMouseAsWorldPoint_mB557A4A258C387891192D31ABB40C66572AD92D2 ();
+// 0x00000002 UnityEngine.Vector3 DragObject::GetTouchAsWorldPoint()
+extern void DragObject_GetTouchAsWorldPoint_m6DEF495574FFA68B9E5C2D7E8E91273AD535BEC8 ();
 // 0x00000003 System.Void DragObject::OnMouseDrag()
 extern void DragObject_OnMouseDrag_mC87F73E0080DDBA912061C897011A47BD733B8C1 ();
 // 0x00000004 System.Void DragObject::.ctor()
@@ -2125,7 +2125,7 @@ extern void DictionaryVisitorHandler_EndInvoke_mCC0FDF1165A41BAE312495222940AD59
 static Il2CppMethodPointer s_methodPointers[1058] = 
 {
 	DragObject_OnMouseDown_m130DDBA9789C86876AC3410E8EFB324E2D3D2CFA,
-	DragObject_GetMouseAsWorldPoint_mB557A4A258C387891192D31ABB40C66572AD92D2,
+	DragObject_GetTouchAsWorldPoint_m6DEF495574FFA68B9E5C2D7E8E91273AD535BEC8,
 	DragObject_OnMouseDrag_mC87F73E0080DDBA912061C897011A47BD733B8C1,
 	DragObject__ctor_m94824E37CDB4EE819AF3A08B806148A398E6B00C,
 	MainMenu_playGame_mE7A6B86508E95E5DDB78A2B2CF53FFB09A0B168D,

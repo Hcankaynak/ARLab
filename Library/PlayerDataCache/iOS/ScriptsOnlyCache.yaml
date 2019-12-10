@@ -15,7 +15,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.iOS.UnityARVideo
     - UnityPointCloudExample
     Unity.TextMeshPro.dll:
-    - TMPro.TMP_ColorGradient
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
@@ -31,7 +30,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   sceneClasses:
-    Assets/Menu.unity:
+    Assets/Scenes/Menu.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -55,33 +54,31 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9500}
-    - Class: 114
-      Script: {instanceID: 9502}
-    - Class: 114
-      Script: {instanceID: 9508}
-    - Class: 114
-      Script: {instanceID: 9514}
-    - Class: 114
       Script: {instanceID: 9522}
     - Class: 114
-      Script: {instanceID: 9558}
+      Script: {instanceID: 9524}
     - Class: 114
-      Script: {instanceID: 9914}
+      Script: {instanceID: 9530}
     - Class: 114
-      Script: {instanceID: 10390}
+      Script: {instanceID: 9536}
     - Class: 114
-      Script: {instanceID: 10492}
+      Script: {instanceID: 9544}
     - Class: 114
-      Script: {instanceID: 10504}
+      Script: {instanceID: 9580}
     - Class: 114
-      Script: {instanceID: 10638}
+      Script: {instanceID: 9936}
     - Class: 114
-      Script: {instanceID: 10868}
+      Script: {instanceID: 10414}
     - Class: 114
-      Script: {instanceID: 10956}
+      Script: {instanceID: 10516}
     - Class: 114
-      Script: {instanceID: 14008}
+      Script: {instanceID: 10528}
+    - Class: 114
+      Script: {instanceID: 10584}
+    - Class: 114
+      Script: {instanceID: 10664}
+    - Class: 114
+      Script: {instanceID: 10894}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -96,7 +93,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    Assets/UnityARKitPlugin/Examples/UnityARKitScene/UnityARKitScene.unity:
+    Assets/Scenes/UnityARKitScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -128,27 +125,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9376}
+      Script: {instanceID: 9398}
     - Class: 114
-      Script: {instanceID: 9388}
+      Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 9736}
+      Script: {instanceID: 9758}
     - Class: 114
-      Script: {instanceID: 9910}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 9928}
+      Script: {instanceID: 9950}
     - Class: 114
-      Script: {instanceID: 10208}
+      Script: {instanceID: 10232}
     - Class: 114
-      Script: {instanceID: 10258}
+      Script: {instanceID: 10282}
     - Class: 114
-      Script: {instanceID: 10294}
+      Script: {instanceID: 10318}
     - Class: 114
-      Script: {instanceID: 10902}
+      Script: {instanceID: 10928}
     - Class: 114
-      Script: {instanceID: 11120}
+      Script: {instanceID: 11146}
     - Class: 114
-      Script: {instanceID: 11200}
+      Script: {instanceID: 11226}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -760,7 +757,7 @@ ScriptsOnlyBuild:
     className: ARReferenceObjectAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: c91c24b7d3b6b2991572f426b51baff3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DragObject
@@ -772,7 +769,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: cb251e755b3f2b2539e24d0d7ff6eab2
+      Hash: f562f9901756abfc6ef0d9b1f462eda1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Spawn
@@ -1414,6 +1411,12 @@ ScriptsOnlyBuild:
     className: ARKitRemoteConnection
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -2012,15 +2015,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
   platform: 9
   scenePathNames:
-  - Assets/Menu.unity
-  - Assets/UnityARKitPlugin/Examples/UnityARKitScene/UnityARKitScene.unity
+  - Assets/Scenes/Menu.unity
+  - Assets/Scenes/UnityARKitScene.unity
   playerPath: /Users/hcankaynak/Desktop/7 - Semester/BBM 419/ArKit Example/ArLab/ArLab
-    Example66
+    Example73

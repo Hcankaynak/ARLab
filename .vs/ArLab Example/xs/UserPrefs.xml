@@ -1,18 +1,18 @@
 ﻿<Properties StartupConfiguration="{F3B51DBE-4EC2-F64E-EF27-0EA114A1718F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DragObject.cs">
     <Files>
-      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/UnityARHitTestExample.cs" Line="22" Column="18" />
-      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/PointCloudParticleExample.cs" />
-      <File FileName="Assets/UnityARKitPlugin/Examples/UnityARKitScene/Spawn.cs" Line="45" Column="18" />
-      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/UnityARGeneratePlane.cs" />
-      <File FileName="Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_StyleSheet.cs" Line="9" Column="19" />
-      <File FileName="Assets/MainMenu.cs" Line="8" Column="1" />
+      <File FileName="Assets/UnityARKitPlugin/Plugins/iOS/UnityARKit/Helpers/UnityARHitTestExample.cs" Line="26" Column="3" />
+      <File FileName="Assets/UnityARKitPlugin/Examples/UnityARKitScene/Spawn.cs" Line="48" Column="23" />
+      <File FileName="Assets/Scripts/DragObject.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ArLab Example" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="DragObject.cs" selected="True" />
+              </Node>
               <Node name="UnityARKitPlugin" expanded="True">
                 <Node name="Examples" expanded="True">
                   <Node name="UnityARKitScene" expanded="True" />
@@ -25,7 +25,6 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="MainMenu.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -34,7 +33,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="78ec54d3-ee31-44b2-9e43-45272d03661f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="74ceed8e-7114-4c06-b072-91c1d162a238" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
