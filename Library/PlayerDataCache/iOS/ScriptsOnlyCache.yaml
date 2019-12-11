@@ -29,6 +29,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Menu.unity:
     - Class: 1
@@ -68,17 +69,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9936}
     - Class: 114
-      Script: {instanceID: 10414}
+      Script: {instanceID: 10412}
     - Class: 114
-      Script: {instanceID: 10516}
+      Script: {instanceID: 10514}
     - Class: 114
-      Script: {instanceID: 10528}
+      Script: {instanceID: 10526}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10664}
+      Script: {instanceID: 10662}
     - Class: 114
-      Script: {instanceID: 10894}
+      Script: {instanceID: 10892}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -112,6 +113,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
@@ -129,26 +132,44 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9410}
     - Class: 114
+      Script: {instanceID: 9522}
+    - Class: 114
+      Script: {instanceID: 9524}
+    - Class: 114
+      Script: {instanceID: 9530}
+    - Class: 114
+      Script: {instanceID: 9536}
+    - Class: 114
+      Script: {instanceID: 9544}
+    - Class: 114
+      Script: {instanceID: 9580}
+    - Class: 114
+      Script: {instanceID: 9582}
+    - Class: 114
       Script: {instanceID: 9758}
     - Class: 114
       Script: {instanceID: 9932}
     - Class: 114
       Script: {instanceID: 9950}
     - Class: 114
-      Script: {instanceID: 10232}
+      Script: {instanceID: 10230}
     - Class: 114
-      Script: {instanceID: 10282}
+      Script: {instanceID: 10280}
     - Class: 114
-      Script: {instanceID: 10318}
+      Script: {instanceID: 10316}
     - Class: 114
-      Script: {instanceID: 10928}
+      Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 11146}
+      Script: {instanceID: 10926}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11144}
+    - Class: 114
+      Script: {instanceID: 11224}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
@@ -159,6 +180,14 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -769,7 +798,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: f562f9901756abfc6ef0d9b1f462eda1
+      Hash: b809d471853e37fc50fa6cad16b8a628
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Spawn
@@ -2020,4 +2049,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/UnityARKitScene.unity
   playerPath: /Users/hcankaynak/Desktop/7 - Semester/BBM 419/ArKit Example/ArLab/ArLab
-    Example73
+    Example89
