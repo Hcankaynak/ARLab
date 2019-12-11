@@ -58,29 +58,8 @@ public class DragObject : MonoBehaviour
 
     }
 
-    void OnCollisionStay(Collision collision)
-    {
-        Debug.Log(collision);
-        Debug.Log(collision.gameObject.tag);
-        Debug.Log("Mahmut was here");
-        if (collision.gameObject.tag == "Tube")
-        {
-            Debug.Log(collision.gameObject.name);
-            Destroy(collision.gameObject);
-        }
+    
 
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision);
-        Debug.Log(collision.gameObject.tag);
-        Debug.Log("Memo was here");
-        if (collision.gameObject.tag == "Tube")
-        {
-            Debug.Log(collision.gameObject.name);
-            Destroy(collision.gameObject);
-        }
 
-    }
 
 }

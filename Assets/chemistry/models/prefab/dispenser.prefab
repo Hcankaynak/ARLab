@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4676211943050204}
   - component: {fileID: 33680227477967390}
   - component: {fileID: 23183785131840324}
-  - component: {fileID: 4075337258109617802}
   - component: {fileID: 961125935509705138}
   - component: {fileID: 8639737403172034574}
+  - component: {fileID: 1255058225772300061}
   m_Layer: 0
   m_Name: dispenser
-  m_TagString: Untagged
+  m_TagString: dispenser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333722015870566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.3817, z: -0.0042}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4075337258109617802
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333722015870566}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.016566752, y: 0.3403105, z: 0.05143004}
-  m_Center: {x: -0.00024664402, y: -0.07614529, z: 0.009986997}
 --- !u!114 &961125935509705138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,3 +111,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1255058225772300061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333722015870566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.016566752, y: 0.47064924, z: 0.05143004}
+  m_Center: {x: -0.00024664402, y: 0.034684777, z: 0.009986997}
