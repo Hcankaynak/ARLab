@@ -8,7 +8,9 @@ public class Spawn : MonoBehaviour
     public GameObject flask;
     public GameObject syringe;
     public GameObject litmusPaper;
+    public GameObject Base;
     public GameObject selectedObject;
+
     public float maxRayDistance = 30.0f;
 
     // Start is called before the first frame update
@@ -56,6 +58,10 @@ public class Spawn : MonoBehaviour
     public void selectLitmusPaper()
     {
         selectedObject = litmusPaper;
+    }
+    public void selectBase()
+    {
+        selectedObject = Base;
     }
 
 }

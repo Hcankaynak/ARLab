@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AR3DOFCameraManager
+    - CollisionDispenser
     - DragObject
     - MainMenu
     - PointCloudParticleExample
@@ -20,6 +21,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -77,9 +86,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10662}
+      Script: {instanceID: 10664}
     - Class: 114
-      Script: {instanceID: 10892}
+      Script: {instanceID: 10894}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -160,11 +169,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10926}
+      Script: {instanceID: 10928}
     - Class: 114
-      Script: {instanceID: 11144}
+      Script: {instanceID: 11146}
     - Class: 114
-      Script: {instanceID: 11224}
+      Script: {instanceID: 11226}
+    - Class: 114
+      Script: {instanceID: 14250}
+    - Class: 114
+      Script: {instanceID: 15294}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -798,7 +811,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: b809d471853e37fc50fa6cad16b8a628
+      Hash: 7bcc2fa36cdee1b8c9b531a34b10b455
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Spawn
@@ -2049,10 +2062,16 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Collision
+    className: CollisionTube
+  - hash:
+      serializedVersion: 2
+      Hash: 9ca776ea08f5c773cad1d487a352fb79
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollisionDispenser
   platform: 9
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/UnityARKitScene.unity
   playerPath: /Users/hcankaynak/Desktop/7 - Semester/BBM 419/ArKit Example/ArLab/ArLab
-    Example96
+    Example101
