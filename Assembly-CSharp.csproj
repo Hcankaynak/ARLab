@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CollisionDispenser.cs" />
     <Compile Include="Assets\Scripts\CollisionLitmusPaper.cs" />
+    <Compile Include="Assets\Scripts\CollisionTarik.cs" />
     <Compile Include="Assets\Scripts\CollisionTube.cs" />
     <Compile Include="Assets\Scripts\DragObject.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />

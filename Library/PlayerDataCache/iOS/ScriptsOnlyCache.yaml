@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AR3DOFCameraManager
     - CollisionDispenser
+    - CollisionTarik
     - DragObject
     - MainMenu
     - PointCloudParticleExample
@@ -24,10 +25,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -76,19 +75,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9580}
     - Class: 114
-      Script: {instanceID: 9936}
+      Script: {instanceID: 9940}
     - Class: 114
-      Script: {instanceID: 10412}
+      Script: {instanceID: 10418}
     - Class: 114
-      Script: {instanceID: 10514}
+      Script: {instanceID: 10520}
     - Class: 114
-      Script: {instanceID: 10526}
+      Script: {instanceID: 10532}
     - Class: 114
-      Script: {instanceID: 10582}
+      Script: {instanceID: 10588}
     - Class: 114
-      Script: {instanceID: 10664}
+      Script: {instanceID: 10668}
     - Class: 114
-      Script: {instanceID: 10894}
+      Script: {instanceID: 10898}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -157,27 +156,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9758}
     - Class: 114
-      Script: {instanceID: 9932}
+      Script: {instanceID: 9918}
     - Class: 114
-      Script: {instanceID: 9950}
+      Script: {instanceID: 9936}
     - Class: 114
-      Script: {instanceID: 10230}
+      Script: {instanceID: 9954}
     - Class: 114
-      Script: {instanceID: 10280}
+      Script: {instanceID: 10236}
     - Class: 114
-      Script: {instanceID: 10316}
+      Script: {instanceID: 10286}
     - Class: 114
-      Script: {instanceID: 10582}
+      Script: {instanceID: 10322}
     - Class: 114
-      Script: {instanceID: 10928}
+      Script: {instanceID: 10588}
     - Class: 114
-      Script: {instanceID: 11146}
+      Script: {instanceID: 10932}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 15294}
+      Script: {instanceID: 13960}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -715,6 +714,12 @@ ScriptsOnlyBuild:
     className: UnityARFaceMeshManager
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollisionTube
+  - hash:
+      serializedVersion: 2
       Hash: 030fa9a1b46f7f2e0f99470d7d28ce64
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -779,6 +784,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
     className: AnalyticsTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 9ca776ea08f5c773cad1d487a352fb79
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollisionDispenser
   - hash:
       serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
@@ -2062,16 +2073,10 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CollisionTube
-  - hash:
-      serializedVersion: 2
-      Hash: 9ca776ea08f5c773cad1d487a352fb79
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CollisionDispenser
+    className: CollisionTarik
   platform: 9
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/UnityARKitScene.unity
   playerPath: /Users/hcankaynak/Desktop/7 - Semester/BBM 419/ArKit Example/ArLab/ArLab
-    Example101
+    Example102
