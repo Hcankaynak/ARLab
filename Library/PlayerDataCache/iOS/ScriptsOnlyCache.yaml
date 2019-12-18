@@ -28,8 +28,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -83,11 +81,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10532}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 10668}
+      Script: {instanceID: 10670}
     - Class: 114
-      Script: {instanceID: 10898}
+      Script: {instanceID: 10900}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -168,15 +166,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10322}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10536}
     - Class: 114
-      Script: {instanceID: 10932}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 11150}
+      Script: {instanceID: 10934}
     - Class: 114
-      Script: {instanceID: 11230}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 13960}
+      Script: {instanceID: 11232}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1416,6 +1414,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollisionTarik
+  - hash:
+      serializedVersion: 2
       Hash: f347306e1327508175f82d7fdaf6a91d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2068,15 +2072,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CollisionTarik
   platform: 9
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/UnityARKitScene.unity
   playerPath: /Users/hcankaynak/Desktop/7 - Semester/BBM 419/ArKit Example/ArLab/ArLab
-    Example102
+    Example103

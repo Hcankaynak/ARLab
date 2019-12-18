@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1545118040152274753}
   - component: {fileID: 1793693549064437496}
   - component: {fileID: 3016070011662534739}
+  - component: {fileID: 6994303429571371798}
   m_Layer: 0
   m_Name: flask_2
   m_TagString: Base
@@ -106,7 +107,7 @@ BoxCollider:
   m_GameObject: {fileID: 1056072967950904}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.1064658, y: 0.13551416, z: 0.102093786}
   m_Center: {x: 0.0021860003, y: 0.06775708, z: 0}
@@ -125,6 +126,20 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!64 &6994303429571371798
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056072967950904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 9333352500077c74aba7dfe6a3d372d2, type: 3}
 --- !u!1 &1913179541754464
 GameObject:
   m_ObjectHideFlags: 0
