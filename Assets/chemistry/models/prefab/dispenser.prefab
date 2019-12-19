@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1255058225772300061}
   - component: {fileID: 485447396014100007}
   - component: {fileID: 7395275827280772778}
+  - component: {fileID: 5818559423208918094}
   m_Layer: 0
   m_Name: dispenser
   m_TagString: dispenser
@@ -138,7 +139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03664c4f389a4c5c858cfca8400bfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   pH: 0
+  animationClip: {fileID: 0}
 --- !u!64 &7395275827280772778
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -153,3 +156,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300036, guid: 43a30abcfba35574fb0480a8ee4abf9a, type: 3}
+--- !u!111 &5818559423208918094
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333722015870566}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
