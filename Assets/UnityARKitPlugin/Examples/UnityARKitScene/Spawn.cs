@@ -10,6 +10,7 @@ public class Spawn : MonoBehaviour
     public GameObject litmusPaper;
     public GameObject Base;
     public GameObject selectedObject;
+    public GameObject panel;
 
     public float maxRayDistance = 30.0f;
 
@@ -17,6 +18,7 @@ public class Spawn : MonoBehaviour
     void Start()
     {
         selectedObject = null;
+        
     }
 
     // Update is called once per frame
@@ -36,8 +38,37 @@ public class Spawn : MonoBehaviour
                 {
                     if (selectedObject != null)
                     {
-                        GameObject go = Instantiate(selectedObject, hit.point, transform.rotation);
+                        if(selectedObject == syringe)
+                        {
+                            GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.05f, 0), transform.rotation);
+                        }
+                        else
+                        {
+                            GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.1f, 0), transform.rotation);
+                        }
+                       
+                        if(selectedObject == flask)
+                        {
+                            PlayerPrefs.SetInt("test1", 1);
+                            Debug.Log("new achievement");
+                        }
+                        else if (selectedObject == Base)
+                        {
+                            PlayerPrefs.SetInt("test2", 1);
+                            Debug.Log("new achievement");
+                        }
+                        else if (selectedObject == litmusPaper)
+                        {
+                            PlayerPrefs.SetInt("test3", 1);
+                            Debug.Log("new achievement");
+                        }
+                        else if (selectedObject == syringe)
+                        {
+                            PlayerPrefs.SetInt("test4", 1);
+                            Debug.Log("new achievement");
+                        }
                         selectedObject = null;
+                        
                     }
                 }
             }

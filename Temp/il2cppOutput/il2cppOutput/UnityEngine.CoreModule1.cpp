@@ -575,6 +575,8 @@ struct Vector2U5BU5D_tA065A07DFC060C1B8786BBAA5F3A6577CCEB27D6;
 struct Vector3U5BU5D_tB9EC3346CC4A0EA5447D968E84A9AC1F6F372C28;
 // UnityEngine.WaitForEndOfFrame
 struct WaitForEndOfFrame_t75980FB3F246D6AD36A85CA2BFDF8474E5EEBCCA;
+// UnityEngine.WaitForSeconds
+struct WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8;
 // UnityEngine.WaitForSecondsRealtime
 struct WaitForSecondsRealtime_t0CF361107C4A9E25E0D4CF2F37732CE785235739;
 // UnityEngine.YieldInstruction
@@ -11320,6 +11322,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RenderTextureDescriptor_get_volumeDep
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RenderTextureDescriptor_get_msaaSamples_mEBE0D743E17068D1898DAE2D281C913E39A33616 (RenderTextureDescriptor_t74FEC57A54F89E11748E1865F7DCA3565BFAF58E * __this, const RuntimeMethod* method);
 // System.Int32 UnityEngine.RenderTextureDescriptor::get_depthBufferBits()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RenderTextureDescriptor_get_depthBufferBits_m51E82C47A0CA0BD8B20F90D43169C956C4F24996 (RenderTextureDescriptor_t74FEC57A54F89E11748E1865F7DCA3565BFAF58E * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Renderer_get_bounds_Injected_mDC960C9F758AFCA774D4359860F9D188E00EA027 (Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * __this, Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.Renderer::Internal_SetPropertyBlock(UnityEngine.MaterialPropertyBlock)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Renderer_Internal_SetPropertyBlock_m92C716E9C4DB64FE53D98F1BE4981FA2644AC43B (Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * __this, MaterialPropertyBlock_t72A481768111C6F11DCDCD44F0C7F99F1CA79E13 * ___properties0, const RuntimeMethod* method);
 // UnityEngine.Material UnityEngine.Renderer::GetMaterial()
@@ -16225,6 +16229,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RenderTextureDescriptor__cctor_mA5675E66
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// UnityEngine.Bounds UnityEngine.Renderer::get_bounds()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890  Renderer_get_bounds_mB29E41E26DD95939C09F3EC67F5B2793A438BDB5 (Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * __this, const RuntimeMethod* method)
+{
+	Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Renderer_get_bounds_Injected_mDC960C9F758AFCA774D4359860F9D188E00EA027(__this, (Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 *)(&V_0), /*hidden argument*/NULL);
+		Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890  L_0 = V_0;
+		return L_0;
+	}
+}
 // UnityEngine.Material UnityEngine.Renderer::GetMaterial()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_tF7DB3BF0C24DEC2FE0CB51E5DF5053D5223C8598 * Renderer_GetMaterial_m370ADC0227BC648BEFAAF85AFB09722E8B20024B (Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * __this, const RuntimeMethod* method)
 {
@@ -16377,6 +16392,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Renderer_set_sharedMaterial_mC94A354D9B0
 		Renderer_SetMaterial_m68B4F4BB5C58FB88AE7AF3829B532869C781FD0F(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}
+}
+// System.Void UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Renderer_get_bounds_Injected_mDC960C9F758AFCA774D4359860F9D188E00EA027 (Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * __this, Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 * ___ret0, const RuntimeMethod* method)
+{
+	typedef void (*Renderer_get_bounds_Injected_mDC960C9F758AFCA774D4359860F9D188E00EA027_ftn) (Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 *, Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 *);
+	static Renderer_get_bounds_Injected_mDC960C9F758AFCA774D4359860F9D188E00EA027_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_get_bounds_Injected_mDC960C9F758AFCA774D4359860F9D188E00EA027_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)");
+	_il2cpp_icall_func(__this, ___ret0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -30694,6 +30718,16 @@ IL2CPP_EXTERN_C void WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8_ma
 // Conversion method for clean up from marshalling of: UnityEngine.WaitForSeconds
 IL2CPP_EXTERN_C void WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8_marshal_com_cleanup(WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8_marshaled_com& marshaled)
 {
+}
+// System.Void UnityEngine.WaitForSeconds::.ctor(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m8E4BA3E27AEFFE5B74A815F26FF8AAB99743F559 (WaitForSeconds_t3E9E78D3BB53F03F96C7F28BA9B9086CD1A5F4E8 * __this, float ___seconds0, const RuntimeMethod* method)
+{
+	{
+		YieldInstruction__ctor_mA72AD367FB081E0C2493649C6E8F7CFC592AB620(__this, /*hidden argument*/NULL);
+		float L_0 = ___seconds0;
+		__this->set_m_Seconds_0(L_0);
+		return;
+	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

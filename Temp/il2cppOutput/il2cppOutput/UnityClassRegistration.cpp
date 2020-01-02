@@ -211,8 +211,8 @@ class LocalizationAsset;
 class Material; template <> void RegisterUnityClass<Material>(const char*);
 class ProceduralMaterial; 
 class Mesh; template <> void RegisterUnityClass<Mesh>(const char*);
-class Motion; template <> void RegisterUnityClass<Motion>(const char*);
-class AnimationClip; template <> void RegisterUnityClass<AnimationClip>(const char*);
+class Motion; 
+class AnimationClip; 
 class PreviewAnimationClip; 
 class NavMeshData; 
 class OcclusionCullingData; 
@@ -295,7 +295,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 81 non stripped classes
+	//Total: 79 non stripped classes
 	//0. Camera
 	RegisterUnityClass<Camera>("Core");
 	//1. Behaviour
@@ -378,22 +378,22 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<Sprite>("Core");
 	//40. SpriteAtlas
 	RegisterUnityClass<SpriteAtlas>("Core");
-	//41. AnimationClip
-	RegisterUnityClass<AnimationClip>("Animation");
-	//42. Motion
-	RegisterUnityClass<Motion>("Animation");
-	//43. Animator
-	RegisterUnityClass<Animator>("Animation");
-	//44. AnimatorOverrideController
-	RegisterUnityClass<AnimatorOverrideController>("Animation");
-	//45. RuntimeAnimatorController
-	RegisterUnityClass<RuntimeAnimatorController>("Animation");
-	//46. Animation
-	RegisterUnityClass<Animation>("Animation");
-	//47. ParticleSystem
+	//41. Rigidbody
+	RegisterUnityClass<Rigidbody>("Physics");
+	//42. Collider
+	RegisterUnityClass<Collider>("Physics");
+	//43. ParticleSystem
 	RegisterUnityClass<ParticleSystem>("ParticleSystem");
-	//48. ParticleSystemRenderer
+	//44. ParticleSystemRenderer
 	RegisterUnityClass<ParticleSystemRenderer>("ParticleSystem");
+	//45. Animator
+	RegisterUnityClass<Animator>("Animation");
+	//46. AnimatorOverrideController
+	RegisterUnityClass<AnimatorOverrideController>("Animation");
+	//47. RuntimeAnimatorController
+	RegisterUnityClass<RuntimeAnimatorController>("Animation");
+	//48. Animation
+	RegisterUnityClass<Animation>("Animation");
 	//49. AudioClip
 	RegisterUnityClass<AudioClip>("Audio");
 	//50. SampleClip
@@ -408,55 +408,51 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<UI::CanvasGroup>("UI");
 	//55. UI::CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
-	//56. Collider
-	RegisterUnityClass<Collider>("Physics");
-	//57. MeshCollider
+	//56. MeshCollider
 	RegisterUnityClass<MeshCollider>("Physics");
-	//58. MonoScript
+	//57. MonoScript
 	RegisterUnityClass<MonoScript>("Core");
-	//59. UnityConnectSettings
+	//58. UnityConnectSettings
 	RegisterUnityClass<UnityConnectSettings>("UnityConnect");
-	//60. AudioManager
+	//59. AudioManager
 	RegisterUnityClass<AudioManager>("Audio");
-	//61. PhysicsManager
+	//60. PhysicsManager
 	RegisterUnityClass<PhysicsManager>("Physics");
-	//62. PlayerSettings
+	//61. PlayerSettings
 	RegisterUnityClass<PlayerSettings>("Core");
-	//63. TimeManager
+	//62. TimeManager
 	RegisterUnityClass<TimeManager>("Core");
-	//64. InputManager
+	//63. InputManager
 	RegisterUnityClass<InputManager>("Core");
-	//65. TagManager
+	//64. TagManager
 	RegisterUnityClass<TagManager>("Core");
-	//66. MonoManager
+	//65. MonoManager
 	RegisterUnityClass<MonoManager>("Core");
-	//67. GraphicsSettings
+	//66. GraphicsSettings
 	RegisterUnityClass<GraphicsSettings>("Core");
-	//68. DelayedCallManager
+	//67. DelayedCallManager
 	RegisterUnityClass<DelayedCallManager>("Core");
-	//69. BuildSettings
+	//68. BuildSettings
 	RegisterUnityClass<BuildSettings>("Core");
-	//70. RuntimeInitializeOnLoadManager
+	//69. RuntimeInitializeOnLoadManager
 	RegisterUnityClass<RuntimeInitializeOnLoadManager>("Core");
-	//71. ResourceManager
+	//70. ResourceManager
 	RegisterUnityClass<ResourceManager>("Core");
-	//72. ScriptMapper
+	//71. ScriptMapper
 	RegisterUnityClass<ScriptMapper>("Core");
-	//73. AudioBehaviour
+	//72. AudioBehaviour
 	RegisterUnityClass<AudioBehaviour>("Audio");
-	//74. AudioListener
+	//73. AudioListener
 	RegisterUnityClass<AudioListener>("Audio");
-	//75. CGProgram
+	//74. CGProgram
 	RegisterUnityClass<CGProgram>("Core");
-	//76. Rigidbody
-	RegisterUnityClass<Rigidbody>("Physics");
-	//77. FlareLayer
-	RegisterUnityClass<FlareLayer>("Core");
-	//78. PhysicMaterial
-	RegisterUnityClass<PhysicMaterial>("Physics");
-	//79. BoxCollider
+	//75. BoxCollider
 	RegisterUnityClass<BoxCollider>("Physics");
-	//80. SphereCollider
+	//76. FlareLayer
+	RegisterUnityClass<FlareLayer>("Core");
+	//77. PhysicMaterial
+	RegisterUnityClass<PhysicMaterial>("Physics");
+	//78. SphereCollider
 	RegisterUnityClass<SphereCollider>("Physics");
 
 }

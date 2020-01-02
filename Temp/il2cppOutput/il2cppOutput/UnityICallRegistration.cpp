@@ -18,39 +18,15 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Animation
 
-		//System.Boolean UnityEngine.Animation::Play(System.String,UnityEngine.PlayMode)
-		void Register_UnityEngine_Animation_Play();
-		Register_UnityEngine_Animation_Play();
-
 		//System.Int32 UnityEngine.Animation::GetStateCount()
 		void Register_UnityEngine_Animation_GetStateCount();
 		Register_UnityEngine_Animation_GetStateCount();
-
-		//System.Void UnityEngine.Animation::AddClip(UnityEngine.AnimationClip,System.String,System.Int32,System.Int32,System.Boolean)
-		void Register_UnityEngine_Animation_AddClip();
-		Register_UnityEngine_Animation_AddClip();
 
 		//UnityEngine.AnimationState UnityEngine.Animation::GetStateAtIndex(System.Int32)
 		void Register_UnityEngine_Animation_GetStateAtIndex();
 		Register_UnityEngine_Animation_GetStateAtIndex();
 
 	//End Registrations for type : UnityEngine.Animation
-
-	//Start Registrations for type : UnityEngine.AnimationClip
-
-		//System.Void UnityEngine.AnimationClip::Internal_CreateAnimationClip(UnityEngine.AnimationClip)
-		void Register_UnityEngine_AnimationClip_Internal_CreateAnimationClip();
-		Register_UnityEngine_AnimationClip_Internal_CreateAnimationClip();
-
-		//System.Void UnityEngine.AnimationClip::SetCurve(System.String,System.Type,System.String,UnityEngine.AnimationCurve)
-		void Register_UnityEngine_AnimationClip_SetCurve();
-		Register_UnityEngine_AnimationClip_SetCurve();
-
-		//System.Void UnityEngine.AnimationClip::set_legacy(System.Boolean)
-		void Register_UnityEngine_AnimationClip_set_legacy();
-		Register_UnityEngine_AnimationClip_set_legacy();
-
-	//End Registrations for type : UnityEngine.AnimationClip
 
 	//Start Registrations for type : UnityEngine.AnimationCurve
 
@@ -431,6 +407,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_CanvasRenderer_GetMaterial();
 
 	//End Registrations for type : UnityEngine.CanvasRenderer
+
+	//Start Registrations for type : UnityEngine.Collider
+
+		//System.Void UnityEngine.Collider::get_bounds_Injected(UnityEngine.Bounds&)
+		void Register_UnityEngine_Collider_get_bounds_Injected();
+		Register_UnityEngine_Collider_get_bounds_Injected();
+
+	//End Registrations for type : UnityEngine.Collider
 
 	//Start Registrations for type : UnityEngine.Component
 
@@ -1504,6 +1488,22 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.PlayerConnectionInternal
 
+	//Start Registrations for type : UnityEngine.PlayerPrefs
+
+		//System.Boolean UnityEngine.PlayerPrefs::HasKey(System.String)
+		void Register_UnityEngine_PlayerPrefs_HasKey();
+		Register_UnityEngine_PlayerPrefs_HasKey();
+
+		//System.Boolean UnityEngine.PlayerPrefs::TrySetInt(System.String,System.Int32)
+		void Register_UnityEngine_PlayerPrefs_TrySetInt();
+		Register_UnityEngine_PlayerPrefs_TrySetInt();
+
+		//System.Void UnityEngine.PlayerPrefs::DeleteAll()
+		void Register_UnityEngine_PlayerPrefs_DeleteAll();
+		Register_UnityEngine_PlayerPrefs_DeleteAll();
+
+	//End Registrations for type : UnityEngine.PlayerPrefs
+
 	//Start Registrations for type : UnityEngine.Profiling.Profiler
 
 		//System.Void UnityEngine.Profiling.Profiler::BeginSampleImpl(System.String,UnityEngine.Object)
@@ -1694,6 +1694,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Renderer_SetMaterial();
 		Register_UnityEngine_Renderer_SetMaterial();
 
+		//System.Void UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)
+		void Register_UnityEngine_Renderer_get_bounds_Injected();
+		Register_UnityEngine_Renderer_get_bounds_Injected();
+
 		//System.Void UnityEngine.Renderer::set_receiveShadows(System.Boolean)
 		void Register_UnityEngine_Renderer_set_receiveShadows();
 		Register_UnityEngine_Renderer_set_receiveShadows();
@@ -1815,6 +1819,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Resources_Load();
 
 	//End Registrations for type : UnityEngine.Resources
+
+	//Start Registrations for type : UnityEngine.Rigidbody
+
+		//System.Void UnityEngine.Rigidbody::set_isKinematic(System.Boolean)
+		void Register_UnityEngine_Rigidbody_set_isKinematic();
+		Register_UnityEngine_Rigidbody_set_isKinematic();
+
+	//End Registrations for type : UnityEngine.Rigidbody
 
 	//Start Registrations for type : UnityEngine.SceneManagement.Scene
 

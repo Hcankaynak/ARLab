@@ -22,10 +22,12 @@ public class Collision : MonoBehaviour
             if (dispenser.pH == 1)
             {
                 gameObject.GetComponent<Renderer>().material.color = Color.red;
+                PlayerPrefs.SetInt("test5", 1);
             }
             else if (dispenser.pH == 2)
             {
                 gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                PlayerPrefs.SetInt("test6", 1);
             }
             
 

@@ -4,12 +4,76 @@ using UnityEngine;
 
 public class CollisionDispenser : MonoBehaviour
 {
-    public Animation anim;
+
     public int pH = 1;
-    public AnimationClip animationClip;
+
 
     // Start is called before the first frame update
-    void OnCollisionEnter(UnityEngine.Collision collision)
+
+    IEnumerator OnCollisionEnter(UnityEngine.Collision collision)
+    {
+
+        if (collision.gameObject.tag == "Tube")
+        {
+
+            collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            Vector3 v = gameObject.transform.position;
+            v.y += 0.12f;
+            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+            {
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
+                yield return new WaitForSeconds(0.00005f);
+            }
+            Vector3 y = collision.gameObject.transform.position;
+            y.y = gameObject.transform.position.y;
+            while (Vector3.Distance(gameObject.transform.position, y) > 0.001f)
+            {
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, y, 0.03f);
+                yield return new WaitForSeconds(0.00005f);
+            }
+            Vector3 z = gameObject.transform.position;
+            z.y -= 0.09f;
+            while (Vector3.Distance(gameObject.transform.position, z) > 0.001f)
+            {
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, z, 0.03f);
+                yield return new WaitForSeconds(0.00005f);
+            }
+            while (Vector3.Distance(gameObject.transform.position, y) > 0.001f)
+            {
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, y, 0.03f);
+                yield return new WaitForSeconds(0.00005f);
+            }
+            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+            {
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
+                yield return new WaitForSeconds(0.00005f);
+            }
+            v.y -= 0.12f;
+            v.x += (v.x - y.x);
+            v.z += (v.z - y.z);
+            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+            {
+                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
+                yield return new WaitForSeconds(0.00005f);
+            }
+            collision.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
+            pH = 1;
+
+            /*
+            yield return new WaitForSeconds(3.0f);
+            v = gameObject.transform.position;
+            v.x += 0.8f;*/
+            //gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, Time.deltaTime * 1.5f);
+        }
+
+
+    }
+
+}
+
+/*
+ void OnCollisionEnter(UnityEngine.Collision collision)
     {
         Debug.Log(collision);
         Debug.Log(collision.gameObject.tag);
@@ -17,46 +81,13 @@ public class CollisionDispenser : MonoBehaviour
 
         if (collision.gameObject.tag == "Tube")
         {
-            anim = GetComponent<Animation>();
-            // define animation curve
-            AnimationCurve translateX = AnimationCurve.Linear(0.0f, transform.position.x, 5.0f, (transform.position.x + 4.0f));
-            animationClip = new AnimationClip();
-            // set animation clip to be legacy
-            animationClip.legacy = true;
-            animationClip.SetCurve("", typeof(Transform), "localPosition.x", translateX);
-            anim.AddClip(animationClip, "test");
-            anim.Play("test");
+            
             pH = 1;
 
         }
         else if (collision.gameObject.tag == "Base")
         {
-            anim = GetComponent<Animation>();
-            // define animation curve
-            AnimationCurve translateX = AnimationCurve.Linear(0.0f, transform.position.x, 1.0f, (transform.position.x + 4.0f));
-            animationClip = new AnimationClip();
-            // set animation clip to be legacy
-            animationClip.legacy = true;
-            animationClip.SetCurve("", typeof(Transform), "localPosition.x", translateX);
-            anim.AddClip(animationClip, "test");
-            anim.Play("test");
+            
             pH = 2;
         }
-    }
-    void OnCollisionStay(UnityEngine.Collision collision)
-    {
-        Debug.Log(collision);
-        Debug.Log(collision.gameObject.tag);
-        Debug.Log("Mahmut was here");
-        if (collision.gameObject.tag == "Tube")
-        {
-            pH = 1;
-
-        }
-        else if (collision.gameObject.tag == "Base")
-        {
-            pH = 2;
-        }
-    }
-
-}
+    }*/
