@@ -1,71 +1,35 @@
-﻿using System.Collections;
-
-using System.Collections.Generic;
-
-using UnityEngine;
-
-
+﻿using UnityEngine;
+using System.Collections;
 
 public class bla : MonoBehaviour
-
 {
 
-    private Vector3 mOffset;
+    public GameObject gameObject1;          // Reference to the first GameObject
+    public GameObject gameObject2;          // Reference to the second GameObject
 
+    //private LineRenderer line;                           // Line Renderer
 
-
-    private float mZCoord;
-
-
-
-    void OnMouseDown()
-
+    // Use this for initialization
+    void Start()
     {
-
-        mZCoord = Camera.main.WorldToScreenPoint(
-
-            gameObject.transform.position).z;
-
-
-
-        // Store offset = gameobject world pos - mouse world pos
-
-        mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
-
+        // Add a Line Renderer to the GameObject
+        //line = this.gameObject.AddComponent<LineRenderer>();
+        // Set the width of the Line Renderer
+        //line.SetWidth(0.05F, 0.05F);
+        // Set the number of vertex fo the Line Renderer
+        //line.SetVertexCount(2);
     }
 
-
-
-    private Vector3 GetMouseAsWorldPoint()
-
+    // Update is called once per frame
+    void Update()
     {
+        // Check if the GameObjects are not null
+        if (gameObject1 != null && gameObject2 != null)
+        {
 
-        // Pixel coordinates of mouse (x,y)
-
-        Vector3 mousePoint = Input.mousePosition;
-
-
-
-        // z coordinate of game object on screen
-
-        mousePoint.z = mZCoord;
-
-
-
-        // Convert it to world points
-
-        return Camera.main.ScreenToWorldPoint(mousePoint);
-
+            // Update position of the two vertex of the Line Renderer
+            GetComponent<LineRenderer>().SetPosition(0, gameObject1.transform.position);
+            GetComponent<LineRenderer>().SetPosition(1, gameObject2.transform.position);
+        }
     }
-
-
-
-    void OnMouseDrag()
-
-    {
-        Debug.Log(gameObject.tag);
-        transform.position = GetMouseAsWorldPoint() + mOffset;
-
-    }
-
 }

@@ -7,14 +7,22 @@ public class CollisionOxygen : MonoBehaviour
     // Start is called before the first frame update
     public bool connection1;
     public bool connection2;
+    private LineRenderer line;    
 
 
     private void Start()
     {
         connection1 = true;
         connection2 = true;
+        // Add a Line Renderer to the GameObject
+        line = gameObject.AddComponent<LineRenderer>();
+        // Set the width of the Line Renderer
+        line.SetWidth(0.05F, 0.05F);
+        // Set the number of vertex fo the Line Renderer
+        line.SetVertexCount(2);
+        line.material.color = Color.black;
 
-        
+
     }
     private void Update()
     {
@@ -37,7 +45,9 @@ public class CollisionOxygen : MonoBehaviour
                 fixedJoint.connectedAnchor = Vector3.zero;
                 gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                 connection1 = false;
-                
+                line.SetPosition(0, transform.position);
+                line.SetPosition(1, collision.gameObject.transform.position);
+
 
             }
             else if (connection2)
@@ -49,7 +59,9 @@ public class CollisionOxygen : MonoBehaviour
                 fixedJoint.connectedAnchor = Vector3.zero;
                 gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                 connection2 = false;
-                
+                line.SetPosition(0, transform.position);
+                line.SetPosition(1, collision.gameObject.transform.position);
+
             }
             else
             {
@@ -69,6 +81,8 @@ public class CollisionOxygen : MonoBehaviour
                 fixedJoint.connectedAnchor = Vector3.zero;
                 gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                 connection1 = false;
+                line.SetPosition(0, transform.position);
+                line.SetPosition(1, collision.gameObject.transform.position);
 
 
             }
@@ -81,6 +95,8 @@ public class CollisionOxygen : MonoBehaviour
                 fixedJoint.connectedAnchor = Vector3.zero;
                 gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                 connection2 = false;
+                line.SetPosition(0, transform.position);
+                line.SetPosition(1, collision.gameObject.transform.position);
 
             }
             else
