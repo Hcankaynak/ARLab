@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6489690714183763510}
   - component: {fileID: 7321609156254767821}
   - component: {fileID: 3598063265919619387}
+  - component: {fileID: -6368536604045392907}
   m_Layer: 0
   m_Name: Oxygen
   m_TagString: Element
@@ -32,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 3670820590123178652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,7 +57,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &3648212653653310726
 MeshRenderer:
@@ -164,3 +165,22 @@ MonoBehaviour:
     type: 3}
   electron5: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
     type: 3}
+--- !u!114 &-6368536604045392907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670820590123178652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f45a453e4ac542e89318652064e636a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electron: {fileID: 0}
+  electron1: {fileID: 0}
+  electron2: {fileID: 0}
+  electron3: {fileID: 0}
+  electron4: {fileID: 0}
+  electron5: {fileID: 0}
+  speed: 0

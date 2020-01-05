@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1840550896790545550}
   - component: {fileID: 1810023684872853742}
   - component: {fileID: 1749296463237812320}
-  - component: {fileID: 6275712511495113671}
   - component: {fileID: 1513840907734158137}
+  - component: {fileID: 7979358285926940049}
   m_Layer: 0
   m_Name: Azote
   m_TagString: Element
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1862980328777728788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,7 +56,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1840550896790545550
 MeshRenderer:
@@ -125,18 +125,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6275712511495113671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862980328777728788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f45a453e4ac542e89318652064e636a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1513840907734158137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +140,25 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &7979358285926940049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862980328777728788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2493fe79bb0db4d0782aa374766def8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electron: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron1: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron2: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron3: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron4: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}

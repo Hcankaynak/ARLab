@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2606565374337352748}
   - component: {fileID: 2646125226771871820}
   - component: {fileID: 4274482228813126705}
-  - component: {fileID: 229372665905021920}
   - component: {fileID: 7068426901801081899}
+  - component: {fileID: 8193659493284382304}
   m_Layer: 0
   m_Name: Hydrogen
   m_TagString: Element
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2629029682868806582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,7 +56,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2606565374337352748
 MeshRenderer:
@@ -125,18 +125,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &229372665905021920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2629029682868806582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f45a453e4ac542e89318652064e636a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7068426901801081899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +140,17 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &8193659493284382304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629029682868806582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c848ce5c1ede464f8872f7c707764a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electron: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}

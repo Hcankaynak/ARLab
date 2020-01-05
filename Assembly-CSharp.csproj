@@ -64,7 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CollisionOxygen.cs" />
-    <Compile Include="Assets\OrbitOxygen.cs" />
+    <Compile Include="Assets\OrbitAzote.cs" />
+    <Compile Include="Assets\OrbitChlorine.cs" />
+    <Compile Include="Assets\OrbitHydrogen.cs" />
     <Compile Include="Assets\Scripts\AchievementController.cs" />
     <Compile Include="Assets\Scripts\CollisionDispenser.cs" />
     <Compile Include="Assets\Scripts\CollisionLitmusPaper.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Assets\Scripts\DragObject.cs" />
     <Compile Include="Assets\Scripts\GameTimeAchievement.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\OrbitOxygen.cs" />
     <Compile Include="Assets\Scripts\SecondMain.cs" />
     <Compile Include="Assets\Scripts\test1.cs" />
     <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
