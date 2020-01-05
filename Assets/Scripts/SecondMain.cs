@@ -36,7 +36,7 @@ public class SecondMain : MonoBehaviour
                 {
                     if (select != null)
                     {
-                        GameObject go = Instantiate(select, hit.point + new Vector3(0,0.05f,0), transform.rotation);
+                        GameObject go = Instantiate(select, hit.point + new Vector3(0,0.5f,0), transform.rotation);
                         select = null;
                     }
                 }

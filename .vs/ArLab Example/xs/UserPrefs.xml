@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{F3B51DBE-4EC2-F64E-EF27-0EA114A1718F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CollisionOxygen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DragObject.cs">
     <Files>
       <File FileName="Assets/UnityARKitPlugin/Examples/UnityARKitScene/Spawn.cs" Line="55" Column="26" />
       <File FileName="Assets/Scripts/SecondMain.cs" />
@@ -7,16 +7,19 @@
       <File FileName="Assets/Scripts/CollisionDispenser.cs" />
       <File FileName="Assets/Scripts/CollisionLitmusPaper.cs" />
       <File FileName="Assets/Scripts/CollisionTarik.cs" />
-      <File FileName="Assets/CollisionOxygen.cs" Line="1" Column="1" />
+      <File FileName="Assets/CollisionOxygen.cs" Line="55" Column="1" />
       <File FileName="Assets/Scripts/MainMenu.cs" />
-      <File FileName="Assets/Scripts/DragObject.cs" />
+      <File FileName="Assets/Scripts/DragObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/OrbitOxygen.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ArLab Example" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="DragObject.cs" selected="True" />
+              </Node>
               <Node name="UnityARKitPlugin" expanded="True">
                 <Node name="Examples" expanded="True">
                   <Node name="ARKit2.0" expanded="True">
@@ -32,7 +35,6 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="CollisionOxygen.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 3648212653653310726}
   - component: {fileID: 3617942660080124262}
   - component: {fileID: 6489690714183763510}
-  - component: {fileID: 8129210154911157187}
   - component: {fileID: 7321609156254767821}
+  - component: {fileID: 3598063265919619387}
   m_Layer: 0
   m_Name: Oxygen
   m_TagString: Element
@@ -125,18 +125,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8129210154911157187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3670820590123178652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f45a453e4ac542e89318652064e636a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7321609156254767821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +140,27 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &3598063265919619387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3670820590123178652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7f78af43ed842f2aa84aaa4284de90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electron: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron1: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron2: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron3: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron4: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}
+  electron5: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
+    type: 3}

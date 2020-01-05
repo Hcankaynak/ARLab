@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CollisionOxygen.cs" />
+    <Compile Include="Assets\OrbitOxygen.cs" />
     <Compile Include="Assets\Scripts\AchievementController.cs" />
     <Compile Include="Assets\Scripts\CollisionDispenser.cs" />
     <Compile Include="Assets\Scripts\CollisionLitmusPaper.cs" />

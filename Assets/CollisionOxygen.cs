@@ -10,17 +10,31 @@ public class CollisionOxygen : MonoBehaviour
     public GameObject electron1;
     public GameObject electron2;
     public GameObject electron3;
+    public GameObject electron4;
+    public GameObject electron5;
     public float speed;
     Vector3 foo;
     Vector3 pos;
 
     private void Start()
     {
-        pos = electron.transform.position;
+        pos = electron.transform.position - transform.position;
         foo = transform.position;
     }
     private void Update()
     {
+        
+        if ( foo != transform.position)
+        {
+            electron.transform.position = transform.position + pos ;
+            electron1.transform.position = transform.position + pos;
+            electron2.transform.position = transform.position + pos;
+            electron3.transform.position = transform.position + pos;
+            electron4.transform.position = transform.position + pos;
+            electron5.transform.position = transform.position + pos;
+            foo = transform.position;
+        }
+        
         orbitAround();
     }
     void OnCollisionEnter(UnityEngine.Collision collision)
@@ -44,6 +58,8 @@ public class CollisionOxygen : MonoBehaviour
         electron1.transform.RotateAround(transform.position, Vector3.left, speed * Time.deltaTime);
         electron2.transform.RotateAround(transform.position, Vector3.forward, speed * Time.deltaTime);
         electron3.transform.RotateAround(transform.position, Vector3.back, speed * Time.deltaTime);
+        electron4.transform.RotateAround(transform.position, new Vector3(-1,0,-1), speed * Time.deltaTime);
+        electron5.transform.RotateAround(transform.position, new Vector3(1, 0, 1), speed * Time.deltaTime);
 
     }
 }
