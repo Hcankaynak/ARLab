@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7979358285926940049}
   m_Layer: 0
   m_Name: Azote
-  m_TagString: Element
+  m_TagString: Azote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

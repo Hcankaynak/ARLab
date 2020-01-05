@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4285409072546038}
   m_Layer: 0
   m_Name: Chlorine
-  m_TagString: Element
+  m_TagString: Chlorine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -53,7 +53,7 @@ public class DragObject : MonoBehaviour
     void OnMouseDrag()
 
     {
-
+        
         transform.position = GetTouchAsWorldPoint() + mOffset;
 
     }

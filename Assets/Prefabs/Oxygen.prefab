@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -6368536604045392907}
   m_Layer: 0
   m_Name: Oxygen
-  m_TagString: Element
+  m_TagString: Oxygen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,10 +177,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f45a453e4ac542e89318652064e636a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electron: {fileID: 0}
-  electron1: {fileID: 0}
-  electron2: {fileID: 0}
-  electron3: {fileID: 0}
-  electron4: {fileID: 0}
-  electron5: {fileID: 0}
-  speed: 0
+  connection1: 0
+  connection2: 0

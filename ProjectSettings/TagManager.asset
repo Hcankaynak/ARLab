@@ -10,6 +10,10 @@ TagManager:
   - LitmusPaper
   - Base
   - Element
+  - Oxygen
+  - Azote
+  - Hydrogen
+  - Chlorine
   layers:
   - Default
   - TransparentFX
