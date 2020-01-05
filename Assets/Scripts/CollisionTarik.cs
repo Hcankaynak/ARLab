@@ -5,6 +5,11 @@ using UnityEngine;
 public class CollisionTarik : MonoBehaviour
 {
 
+   
+    private void Update()
+    {
+        
+    }
 
 
 
@@ -39,25 +44,7 @@ public class CollisionTarik : MonoBehaviour
             gameObject.GetComponent<Renderer>().material.color = Color.blue;
         }
     }
-    void OnCollisionStay(UnityEngine.Collision collision)
-    {
-        Debug.Log(collision);
-        Debug.Log(collision.gameObject.tag);
-        Debug.Log("Mahmut was here");
-        if (collision.gameObject.tag == "dispenser")
-        {
-            CollisionDispenser dispenser = collision.gameObject.GetComponent("CollisionDispenser") as CollisionDispenser;
-            if (dispenser.pH == 1)
-            {
-                gameObject.GetComponent<Renderer>().material.color = Color.red;
-            }
-            else if (dispenser.pH == 2)
-            {
-                gameObject.GetComponent<Renderer>().material.color = Color.blue;
-            }
-
-        }
-    }
+    
 
 
 }

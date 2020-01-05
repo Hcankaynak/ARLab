@@ -24,6 +24,10 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerPrefs.HasKey("achi"))
+        {
+
+        }
         var touch = Input.GetTouch(0);
         if (touch.phase == TouchPhase.Began)
         {
@@ -44,7 +48,7 @@ public class Spawn : MonoBehaviour
                         }
                         else
                         {
-                            GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.1f, 0), transform.rotation);
+                            GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.5f, 0), transform.rotation);
                         }
                        
                         if(selectedObject == flask)

@@ -21,7 +21,8 @@ public class Collision : MonoBehaviour
             Debug.Log(dispenser.pH);
             if (dispenser.pH == 1)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.red;
+                gameObject.GetComponent<Renderer>().material.color = Color.Lerp(gameObject.GetComponent<Renderer>().material.color,Color.red,0.5f);
+                
                 PlayerPrefs.SetInt("test5", 1);
             }
             else if (dispenser.pH == 2)

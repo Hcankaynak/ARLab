@@ -9,6 +9,7 @@ TagManager:
   - dispenser
   - LitmusPaper
   - Base
+  - Element
   layers:
   - Default
   - TransparentFX

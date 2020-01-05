@@ -4,7 +4,7 @@ ScriptsOnlyBuild:
     - AR3DOFCameraManager
     - AchievementController
     - CollisionDispenser
-    - CollisionTarik
+    - CollisionOxygen
     - DragObject
     - MainMenu
     - PointCloudParticleExample
@@ -45,7 +45,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Slider
-    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/First.unity:
     - Class: 1
@@ -117,8 +116,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10528}
     - Class: 114
-      Script: {instanceID: 10544}
-    - Class: 114
       Script: {instanceID: 10598}
     - Class: 114
       Script: {instanceID: 10678}
@@ -161,23 +158,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -186,8 +171,6 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 109
-      Script: {instanceID: 0}
-    - Class: 111
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 9522}
@@ -207,14 +190,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9578}
     - Class: 114
       Script: {instanceID: 9580}
-    - Class: 114
-      Script: {instanceID: 9582}
-    - Class: 114
-      Script: {instanceID: 9780}
-    - Class: 114
-      Script: {instanceID: 9922}
-    - Class: 114
-      Script: {instanceID: 9940}
     - Class: 114
       Script: {instanceID: 9944}
     - Class: 114
@@ -303,6 +278,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9826}
     - Class: 114
+      Script: {instanceID: 9940}
+    - Class: 114
       Script: {instanceID: 10240}
     - Class: 114
       Script: {instanceID: 10290}
@@ -320,6 +297,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11162}
     - Class: 114
       Script: {instanceID: 11242}
+    - Class: 114
+      Script: {instanceID: 42326}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -1637,7 +1616,7 @@ ScriptsOnlyBuild:
     className: ARKitRemoteConnection
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: dca824ac5955a2e98eacc0b9a19f3a85
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -2247,10 +2226,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollisionOxygen
   platform: 9
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/First.unity
   - Assets/Scenes/Second.unity
   playerPath: /Users/hcankaynak/Desktop/7 - Semester/BBM 419/ArKit Example/ArLab/ArLab
-    Example111
+    Example115
