@@ -7,7 +7,7 @@ public class bla : MonoBehaviour
     public GameObject gameObject1;          // Reference to the first GameObject
     public GameObject gameObject2;          // Reference to the second GameObject
 
-    //private LineRenderer line;                           // Line Renderer
+    private LineRenderer line;                           // Line Renderer
 
     // Use this for initialization
     void Start()

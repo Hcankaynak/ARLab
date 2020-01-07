@@ -64,20 +64,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\bla.cs" />
+    <Compile Include="Assets\CollisionCarbon.cs" />
     <Compile Include="Assets\CollisionController.cs" />
-    <Compile Include="Assets\CollisionOxygen.cs" />
-    <Compile Include="Assets\OrbitAzote.cs" />
-    <Compile Include="Assets\OrbitChlorine.cs" />
-    <Compile Include="Assets\OrbitHydrogen.cs" />
+    <Compile Include="Assets\OrbitCarbon.cs" />
     <Compile Include="Assets\Scripts\AchievementController.cs" />
+    <Compile Include="Assets\Scripts\CollisionAzote.cs" />
     <Compile Include="Assets\Scripts\CollisionDispenser.cs" />
     <Compile Include="Assets\Scripts\CollisionLitmusPaper.cs" />
+    <Compile Include="Assets\Scripts\CollisionOxygen.cs" />
     <Compile Include="Assets\Scripts\CollisionTarik.cs" />
     <Compile Include="Assets\Scripts\CollisionTube.cs" />
     <Compile Include="Assets\Scripts\delete.cs" />
     <Compile Include="Assets\Scripts\DragObject.cs" />
     <Compile Include="Assets\Scripts\GameTimeAchievement.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\OrbitAzote.cs" />
+    <Compile Include="Assets\Scripts\OrbitChlorine.cs" />
+    <Compile Include="Assets\Scripts\OrbitHydrogen.cs" />
     <Compile Include="Assets\Scripts\OrbitOxygen.cs" />
     <Compile Include="Assets\Scripts\SecondMain.cs" />
     <Compile Include="Assets\Scripts\test1.cs" />

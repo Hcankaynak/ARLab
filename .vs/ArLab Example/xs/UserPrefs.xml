@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{F3B51DBE-4EC2-F64E-EF27-0EA114A1718F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CollisionController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CollisionCarbon.cs">
     <Files>
-      <File FileName="Assets/CollisionOxygen.cs" Line="25" Column="41" />
-      <File FileName="Assets/Scripts/DragObject.cs" Line="56" Column="9" />
-      <File FileName="Assets/bla.cs" Line="66" Column="35" />
-      <File FileName="Assets/CollisionController.cs" Line="5" Column="27" />
+      <File FileName="Assets/CollisionController.cs" Line="60" Column="32" />
+      <File FileName="Assets/Scripts/OrbitAzote.cs" Line="12" Column="33" />
+      <File FileName="Assets/OrbitCarbon.cs" Line="12" Column="1" />
+      <File FileName="Assets/CollisionCarbon.cs" Line="16" Column="9" />
+      <File FileName="Assets/Scripts/CollisionOxygen.cs" Line="22" Column="49" />
+      <File FileName="Assets/Scripts/CollisionAzote.cs" Line="19" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,7 +29,7 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="CollisionController.cs" selected="True" />
+              <Node name="CollisionCarbon.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -36,7 +38,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fbbb182f-9a99-4ac5-97dd-0ca74f2b18f7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f12f4d0f-9740-442a-992e-c7f8c722ea55" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
