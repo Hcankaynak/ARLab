@@ -14,6 +14,7 @@ public class CollisionAzote : MonoBehaviour
     GameObject gam1;
     GameObject gam2;
     GameObject gam3;
+    private int col;
 
 
     private void Start()
@@ -54,138 +55,139 @@ public class CollisionAzote : MonoBehaviour
     void OnCollisionEnter(UnityEngine.Collision collision)
     {
 
-        if (collision.gameObject.tag == "Hydrogen")
+        if(col != collision.gameObject.GetInstanceID())
         {
-
-            if (connection1)
+            if (collision.gameObject.tag == "Hydrogen")
             {
-                FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
-                fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                fixedJoint.autoConfigureConnectedAnchor = false;
-                fixedJoint.anchor = new Vector3(2, 0, 2);
-                fixedJoint.connectedAnchor = Vector3.zero;
-                gameObject.GetComponent<Rigidbody>().freezeRotation = true;
-                connection1 = false;
-                line1 = gameObject.AddComponent<LineRenderer>();
-                // Set the width of the Line Renderer
-                line1.SetWidth(0.05F, 0.05F);
-                // Set the number of vertex fo the Line Renderer
-                line1.SetVertexCount(2);
-                line1.material.color = Color.black;
-                line1.SetPosition(0, transform.position);
-                line1.SetPosition(1, collision.gameObject.transform.position);
 
-                gam1 = collision.gameObject;
+                if (connection1)
+                {
+                    FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
+                    fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                    fixedJoint.autoConfigureConnectedAnchor = false;
+                    fixedJoint.anchor = new Vector3(2, 0, 2);
+                    fixedJoint.connectedAnchor = Vector3.zero;
+                    gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+                    connection1 = false;
+                    line1 = gameObject.AddComponent<LineRenderer>();
+                    // Set the width of the Line Renderer
+                    line1.SetWidth(0.05F, 0.05F);
+                    // Set the number of vertex fo the Line Renderer
+                    line1.SetVertexCount(2);
+                    line1.material.color = Color.black;
+                    line1.SetPosition(0, transform.position);
+                    line1.SetPosition(1, collision.gameObject.transform.position);
+
+                    gam1 = collision.gameObject;
+
+
+                }
+                else if (connection2)
+                {
+                    FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
+                    fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                    fixedJoint.autoConfigureConnectedAnchor = false;
+                    fixedJoint.anchor = new Vector3(-2, 0, 2);
+                    fixedJoint.connectedAnchor = Vector3.zero;
+                    gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+                    connection2 = false;
+                    line2 = gameObject.AddComponent<LineRenderer>();
+                    // Set the width of the Line Renderer
+                    line2.SetWidth(0.05F, 0.05F);
+                    // Set the number of vertex fo the Line Renderer
+                    line2.SetVertexCount(2);
+                    line2.material.color = Color.black;
+                    line2.SetPosition(0, transform.position);
+                    line2.SetPosition(1, collision.gameObject.transform.position);
+                    gam2 = collision.gameObject;
+
+                }
+                else if (connection3)
+                {
+                    FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
+                    fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                    fixedJoint.autoConfigureConnectedAnchor = false;
+                    fixedJoint.anchor = new Vector3(0, 0, 2);
+                    fixedJoint.connectedAnchor = Vector3.zero;
+                    gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+                    connection3 = false;
+                    line3 = gameObject.AddComponent<LineRenderer>();
+                    // Set the width of the Line Renderer
+                    line3.SetWidth(0.05F, 0.05F);
+                    // Set the number of vertex fo the Line Renderer
+                    line3.SetVertexCount(2);
+                    line3.material.color = Color.black;
+                    line3.SetPosition(0, transform.position);
+                    line3.SetPosition(1, collision.gameObject.transform.position);
+                    gam3 = collision.gameObject;
+                }
 
 
             }
-            else if (connection2)
+            else if (collision.gameObject.tag == "Chlorine")
             {
-                FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
-                fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                fixedJoint.autoConfigureConnectedAnchor = false;
-                fixedJoint.anchor = new Vector3(-2, 0, 2);
-                fixedJoint.connectedAnchor = Vector3.zero;
-                gameObject.GetComponent<Rigidbody>().freezeRotation = true;
-                connection2 = false;
-                line2 = gameObject.AddComponent<LineRenderer>();
-                // Set the width of the Line Renderer
-                line2.SetWidth(0.05F, 0.05F);
-                // Set the number of vertex fo the Line Renderer
-                line2.SetVertexCount(2);
-                line2.material.color = Color.black;
-                line2.SetPosition(0, transform.position);
-                line2.SetPosition(1, collision.gameObject.transform.position);
-                gam2 = collision.gameObject;
+                if (connection1)
+                {
+                    FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
+                    fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                    fixedJoint.autoConfigureConnectedAnchor = false;
+                    fixedJoint.anchor = new Vector3(2, 0, 2);
+                    fixedJoint.connectedAnchor = Vector3.zero;
+                    gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+                    connection1 = false;
+                    line1 = gameObject.AddComponent<LineRenderer>();
+                    // Set the width of the Line Renderer
+                    line1.SetWidth(0.05F, 0.05F);
+                    // Set the number of vertex fo the Line Renderer
+                    line1.SetVertexCount(2);
+                    line1.material.color = Color.black;
+                    line1.SetPosition(0, transform.position);
+                    line1.SetPosition(1, collision.gameObject.transform.position);
+                    gam1 = collision.gameObject;
 
+
+                }
+                else if (connection2)
+                {
+                    FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
+                    fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                    fixedJoint.autoConfigureConnectedAnchor = false;
+                    fixedJoint.anchor = new Vector3(-2, 0, 2);
+                    fixedJoint.connectedAnchor = Vector3.zero;
+                    gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+                    connection2 = false;
+                    line2 = gameObject.AddComponent<LineRenderer>();
+                    // Set the width of the Line Renderer
+                    line2.SetWidth(0.05F, 0.05F);
+                    // Set the number of vertex fo the Line Renderer
+                    line2.SetVertexCount(2);
+                    line2.material.color = Color.black;
+                    line2.SetPosition(0, transform.position);
+                    line2.SetPosition(1, collision.gameObject.transform.position);
+                    gam2 = collision.gameObject;
+
+                }
+                else if (connection3)
+                {
+                    FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
+                    fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
+                    fixedJoint.autoConfigureConnectedAnchor = false;
+                    fixedJoint.anchor = new Vector3(0, 0, 2);
+                    fixedJoint.connectedAnchor = Vector3.zero;
+                    gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+                    connection3 = false;
+                    line3 = gameObject.AddComponent<LineRenderer>();
+                    // Set the width of the Line Renderer
+                    line3.SetWidth(0.05F, 0.05F);
+                    // Set the number of vertex fo the Line Renderer
+                    line3.SetVertexCount(2);
+                    line3.material.color = Color.black;
+                    line3.SetPosition(0, transform.position);
+                    line3.SetPosition(1, collision.gameObject.transform.position);
+                    gam3 = collision.gameObject;
+                }
             }
-            else if (connection3)
-            {
-                FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
-                fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                fixedJoint.autoConfigureConnectedAnchor = false;
-                fixedJoint.anchor = new Vector3(0, 0, 2);
-                fixedJoint.connectedAnchor = Vector3.zero;
-                gameObject.GetComponent<Rigidbody>().freezeRotation = true;
-                connection3 = false;
-                line3 = gameObject.AddComponent<LineRenderer>();
-                // Set the width of the Line Renderer
-                line3.SetWidth(0.05F, 0.05F);
-                // Set the number of vertex fo the Line Renderer
-                line3.SetVertexCount(2);
-                line3.material.color = Color.black;
-                line3.SetPosition(0, transform.position);
-                line3.SetPosition(1, collision.gameObject.transform.position);
-                gam3 = collision.gameObject;
-            }
-            
-            
         }
-        else if (collision.gameObject.tag == "Chlorine")
-        {
-            if (connection1)
-            {
-                FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
-                fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                fixedJoint.autoConfigureConnectedAnchor = false;
-                fixedJoint.anchor = new Vector3(2, 0, 2);
-                fixedJoint.connectedAnchor = Vector3.zero;
-                gameObject.GetComponent<Rigidbody>().freezeRotation = true;
-                connection1 = false;
-                line1 = gameObject.AddComponent<LineRenderer>();
-                // Set the width of the Line Renderer
-                line1.SetWidth(0.05F, 0.05F);
-                // Set the number of vertex fo the Line Renderer
-                line1.SetVertexCount(2);
-                line1.material.color = Color.black;
-                line1.SetPosition(0, transform.position);
-                line1.SetPosition(1, collision.gameObject.transform.position);
-                gam1 = collision.gameObject;
-
-
-            }
-            else if (connection2)
-            {
-                FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
-                fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                fixedJoint.autoConfigureConnectedAnchor = false;
-                fixedJoint.anchor = new Vector3(-2, 0, 2);
-                fixedJoint.connectedAnchor = Vector3.zero;
-                gameObject.GetComponent<Rigidbody>().freezeRotation = true;
-                connection2 = false;
-                line2 = gameObject.AddComponent<LineRenderer>();
-                // Set the width of the Line Renderer
-                line2.SetWidth(0.05F, 0.05F);
-                // Set the number of vertex fo the Line Renderer
-                line2.SetVertexCount(2);
-                line2.material.color = Color.black;
-                line2.SetPosition(0, transform.position);
-                line2.SetPosition(1, collision.gameObject.transform.position);
-                gam2 = collision.gameObject;
-
-            }
-            else if(connection3)
-            {
-                FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
-                fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
-                fixedJoint.autoConfigureConnectedAnchor = false;
-                fixedJoint.anchor = new Vector3(0, 0, 2);
-                fixedJoint.connectedAnchor = Vector3.zero;
-                gameObject.GetComponent<Rigidbody>().freezeRotation = true;
-                connection3 = false;
-                line3 = gameObject.AddComponent<LineRenderer>();
-                // Set the width of the Line Renderer
-                line3.SetWidth(0.05F, 0.05F);
-                // Set the number of vertex fo the Line Renderer
-                line3.SetVertexCount(2);
-                line3.material.color = Color.black;
-                line3.SetPosition(0, transform.position);
-                line3.SetPosition(1, collision.gameObject.transform.position);
-                gam3 = collision.gameObject;
-            }
-        }
-
-
 
     }
 

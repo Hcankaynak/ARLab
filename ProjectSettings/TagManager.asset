@@ -14,6 +14,7 @@ TagManager:
   - Azote
   - Hydrogen
   - Chlorine
+  - Carbon
   layers:
   - Default
   - TransparentFX
