@@ -1,2 +1,34 @@
 Base path: /Applications/Unity/Hub/Editor/2019.1.14f1/Unity.app/Contents
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=14 insize=2134 outsize=789 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=812 outsize=1373 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=3420 outsize=48573 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=7524 outsize=10693 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=5188 outsize=5509 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=5397 outsize=7573 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=7289 outsize=11297 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=2444 outsize=3245 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3245 outsize=5345 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=9421 outsize=9705 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=9421 outsize=9937 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=9517 outsize=16341 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2021 outsize=3173 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=1864 outsize=1145 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=1801 outsize=2489 ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=17531 outsize=1471 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_DLDR_ENCODING ok=1

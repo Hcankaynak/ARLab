@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1749296463237812320}
   - component: {fileID: 1513840907734158137}
   - component: {fileID: 7979358285926940049}
+  - component: {fileID: 414884893949683999}
   m_Layer: 0
   m_Name: Azote
   m_TagString: Azote
@@ -162,3 +163,18 @@ MonoBehaviour:
     type: 3}
   electron4: {fileID: 1680602779933655226, guid: c224a41ccf0e34588ac6e69f43fa7efb,
     type: 3}
+--- !u!114 &414884893949683999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862980328777728788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae998afd42394d74a9ad9c5c8912680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connection1: 0
+  connection2: 0
+  connection3: 0
