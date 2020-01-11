@@ -1967,9 +1967,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Oxygen: {fileID: 3670820590123178652, guid: 552ba62ddcbf74ff5a37687f05777a5e, type: 3}
-  Azote: {fileID: 1154719652421038, guid: eb481cd73628241a481704289838a9a6, type: 3}
-  Chlorine: {fileID: 1154719652421038, guid: 86279653b471d4da58eead72a94819d4, type: 3}
-  Hydrogen: {fileID: 1154719652421038, guid: 328c392b5df9d4a19b2bd48c59328d8d, type: 3}
+  Azote: {fileID: 1862980328777728788, guid: 50f802a2d857a494c9d71e9c5d64e231, type: 3}
+  Chlorine: {fileID: 7312112772842408366, guid: 5d9130917ccd14dfc8b65181b8d7206d,
+    type: 3}
+  Hydrogen: {fileID: 2629029682868806582, guid: 25c9b42c4dc65480b95094f63a96c76d,
+    type: 3}
   select: {fileID: 0}
   maxRayDistances: 30
 --- !u!1 &1859185635

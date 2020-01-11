@@ -85,6 +85,12 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>/Users/hcankaynak/Desktop/7 - Semester/BBM 419/Unity Projects/ArLab Example/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.postprocessing.Editor">
+      <HintPath>/Users/hcankaynak/Desktop/7 - Semester/BBM 419/Unity Projects/ArLab Example/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.postprocessing.Runtime">
+      <HintPath>/Users/hcankaynak/Desktop/7 - Semester/BBM 419/Unity Projects/ArLab Example/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.14f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
