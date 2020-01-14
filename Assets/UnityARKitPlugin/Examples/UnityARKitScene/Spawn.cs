@@ -5,12 +5,17 @@ using UnityEngine.XR.iOS;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject flask;
+    public GameObject HCl;
     public GameObject syringe;
     public GameObject litmusPaper;
-    public GameObject Base;
+    public GameObject Apple;
     public GameObject selectedObject;
-    public GameObject panel;
+    public GameObject Cola;
+    public GameObject Listerin;
+    public GameObject Soda;
+    public GameObject SodyumHidroksit;
+    public GameObject Amonyak;
+    public GameObject DetergentWater;
 
     public float maxRayDistance = 30.0f;
 
@@ -51,12 +56,12 @@ public class Spawn : MonoBehaviour
                             GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.5f, 0), transform.rotation);
                         }
                        
-                        if(selectedObject == flask)
+                        if(selectedObject == HCl)
                         {
                             PlayerPrefs.SetInt("test1", 1);
                             Debug.Log("new achievement");
                         }
-                        else if (selectedObject == Base)
+                        else if (selectedObject == Apple)
                         {
                             PlayerPrefs.SetInt("test2", 1);
                             Debug.Log("new achievement");
@@ -80,9 +85,9 @@ public class Spawn : MonoBehaviour
         }
     }
 
-    public void selectFlask()
+    public void selectHCl()
     {
-        selectedObject = flask;
+        selectedObject = HCl;
     }
 
     public void selectSyringe()
@@ -94,9 +99,33 @@ public class Spawn : MonoBehaviour
     {
         selectedObject = litmusPaper;
     }
-    public void selectBase()
+    public void selectApple()
     {
-        selectedObject = Base;
+        selectedObject = Apple;
+    }
+    public void selectCola()
+    {
+        selectedObject = Cola;
+    }
+    public void selectListerin()
+    {
+        selectedObject = Listerin;
+    }
+    public void selectSoda()
+    {
+        selectedObject = Soda;
+    }
+    public void selectSodyum()
+    {
+        selectedObject = SodyumHidroksit;
+    }
+    public void selectAmonyak()
+    {
+        selectedObject = Amonyak;
+    }
+    public void selectDetergentWater()
+    {
+        selectedObject = DetergentWater;
     }
 
 }

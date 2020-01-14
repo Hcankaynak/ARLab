@@ -74,6 +74,9 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\InstructionManager.cs" />
+    <Compile Include="Assets\LevelController.cs" />
+    <Compile Include="Assets\QuestionController.cs" />
     <Compile Include="Assets\Scripts\AchievementController.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionAzote.cs" />
     <Compile Include="Assets\Scripts\Collision\CollisionCarbon.cs" />
@@ -91,6 +94,7 @@
     <Compile Include="Assets\Scripts\Orbit\OrbitChlorine.cs" />
     <Compile Include="Assets\Scripts\Orbit\OrbitHydrogen.cs" />
     <Compile Include="Assets\Scripts\Orbit\OrbitOxygen.cs" />
+    <Compile Include="Assets\Scripts\PositionLerper.cs" />
     <Compile Include="Assets\Scripts\SecondMain.cs" />
     <Compile Include="Assets\Scripts\test1.cs" />
     <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
@@ -249,11 +253,11 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>/Users/hcankaynak/Desktop/7 - Semester/BBM 419/Unity Projects/ArLab Example/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.postprocessing.Editor">
-      <HintPath>/Users/hcankaynak/Desktop/7 - Semester/BBM 419/Unity Projects/ArLab Example/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>/Users/hcankaynak/Desktop/7 - Semester/BBM 419/Unity Projects/ArLab Example/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.postprocessing.Runtime">
-      <HintPath>/Users/hcankaynak/Desktop/7 - Semester/BBM 419/Unity Projects/ArLab Example/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>/Users/hcankaynak/Desktop/7 - Semester/BBM 419/Unity Projects/ArLab Example/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.1.14f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

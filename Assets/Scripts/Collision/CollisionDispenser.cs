@@ -1,107 +1,171 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class CollisionDispenser : MonoBehaviour
 {
 
-    public int pH = 1;
-
+    public float pH = 1.0f;
+    private string[] chemicals = { "Amonyak", "Apple", "Cola", "DetergentWater", "HCl", "Listerin", "Soda", "SodyumHidroksit" };
 
     // Start is called before the first frame update
 
+    IEnumerator waitForXSecond(float value)
+    {
+        yield return new WaitForSeconds(value);
+    }
+
+    
+
     IEnumerator OnCollisionEnter(UnityEngine.Collision collision)
     {
-
-        if (collision.gameObject.tag == "Tube" || collision.gameObject.tag == "Base")
+        if (chemicals.Contains((collision.gameObject.tag)))
         {
 
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            float height = collision.gameObject.GetComponent<MeshRenderer>().bounds.size.y;
             Vector3 v = gameObject.transform.position;
-            v.y += 0.12f;
-            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+            v.y += height * 1.2f;
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
+
+            Debug.Log("merhaba tarik");
             Vector3 y = collision.gameObject.transform.position;
             y.y = gameObject.transform.position.y;
-            while (Vector3.Distance(gameObject.transform.position, y) > 0.001f)
+            gameObject.GetComponent<PositionLerper>().newPosition = y;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, y, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
             Vector3 z = gameObject.transform.position;
-            z.y -= 0.4f;
-            while (Vector3.Distance(gameObject.transform.position, z) > 0.001f)
+            z.y -= height;
+            gameObject.GetComponent<PositionLerper>().newPosition = z;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, z, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
-            while (Vector3.Distance(gameObject.transform.position, y) > 0.001f)
+            yield return new WaitForSeconds(0.5f);
+            gameObject.GetComponent<PositionLerper>().newPosition = y;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, y, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
-            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
-            v.y -= 0.12f;
+
+            v.y -= height * 1.2f;
             v.x += (v.x - y.x);
             v.z += (v.z - y.z);
-            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
+
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
-            if (collision.gameObject.tag == "Tube")
+            if (collision.gameObject.tag == "Amonyak")
             {
-                pH = 1;
+                pH = 11.0f;
             }
-            else
+            else if (collision.gameObject.tag == "Apple")
             {
-                pH = 2;
+                pH = 3.0f;
             }
-
-            /*
-            yield return new WaitForSeconds(3.0f);
-            v = gameObject.transform.position;
-            v.x += 0.8f;*/
-            //gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, Time.deltaTime * 1.5f);
+            else if (collision.gameObject.tag == "Cola")
+            {
+                pH = 2.6f;
+            }
+            else if (collision.gameObject.tag == "DetergentWater")
+            {
+                pH = 9.7f;
+            }
+            else if (collision.gameObject.tag == "HCl")
+            {
+                pH = 1.0f;
+            }
+            else if (collision.gameObject.tag == "Listerin")
+            {
+                pH = 5.45f;
+            }
+            else if (collision.gameObject.tag == "Soda")
+            {
+                pH = 8.3f;
+            }
+            else if (collision.gameObject.tag == "SodyumHidroksit")
+            {
+                pH = 13.5f;
+            }
         }
+
         else if (collision.gameObject.tag == "LitmusPaper")
         {
             Debug.Log("Litmus paper work");
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            float height = collision.gameObject.GetComponent<MeshRenderer>().bounds.size.y;
             Vector3 v = gameObject.transform.position;
             v.y += 0.12f;
-            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
-            }
-            Vector3 y = collision.gameObject.transform.position;
-            y.y = gameObject.transform.position.y;
-            while (Vector3.Distance(gameObject.transform.position, y) > 0.001f)
-            {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, y, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
-            }
-            Vector3 z = gameObject.transform.position;
-            z.y -= 0.105f;
-            while (Vector3.Distance(gameObject.transform.position, z) > 0.001f)
-            {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, z, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
 
-            if (pH == 1)
+            Vector3 y = collision.gameObject.transform.position;
+            y.y = gameObject.transform.position.y;
+            gameObject.GetComponent<PositionLerper>().newPosition = y;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            Vector3 z = gameObject.transform.position;
+            z.y -= 0.12f - height;
+            gameObject.GetComponent<PositionLerper>().newPosition = z;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            if (pH <= 2.0f)
             {
                 collision.gameObject.GetComponent<ColorLerper>().newColor = new Color32(255, 109, 109, 0);
+                collision.gameObject.GetComponent<ColorLerper>().activation = true;
+            }
+            else if (pH <= 4.0f)
+            {
+                collision.gameObject.GetComponent<ColorLerper>().newColor = new Color32(255, 153, 154, 0);
+                collision.gameObject.GetComponent<ColorLerper>().activation = true;
+            }
+            else if (pH <= 7.0f)
+            {
+                collision.gameObject.GetComponent<ColorLerper>().newColor = new Color32(255, 197, 196, 0);
+                collision.gameObject.GetComponent<ColorLerper>().activation = true;
+            }
+            else if (pH <= 9.0f)
+            {
+                collision.gameObject.GetComponent<ColorLerper>().newColor = new Color32(200, 199, 255, 0);
+                collision.gameObject.GetComponent<ColorLerper>().activation = true;
+            }
+            else if (pH <= 12.0f)
+            {
+                collision.gameObject.GetComponent<ColorLerper>().newColor = new Color32(120, 119, 255, 0);
                 collision.gameObject.GetComponent<ColorLerper>().activation = true;
             }
             else
@@ -110,24 +174,30 @@ public class CollisionDispenser : MonoBehaviour
                 collision.gameObject.GetComponent<ColorLerper>().activation = true;
             }
 
-            while (Vector3.Distance(gameObject.transform.position, y) > 0.001f)
+            yield return new WaitForSeconds(0.5f);
+            gameObject.GetComponent<PositionLerper>().newPosition = y;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, y, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
-            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
             v.y -= 0.12f;
             v.x += (v.x - y.x);
             v.z += (v.z - y.z);
-            while (Vector3.Distance(gameObject.transform.position, v) > 0.001f)
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, v, 0.03f);
-                yield return new WaitForSeconds(0.00005f);
+                yield return new WaitForSeconds(0.1f);
             }
+
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
 

@@ -12,23 +12,32 @@ public class AchievementController : MonoBehaviour
     public GameObject test5;
     public GameObject test6;
     public GameObject test7;
+    public GameObject test8;
+    public GameObject test9;
+    public GameObject test10;
 
-    public Sprite done;
-    public Sprite notDone;
+    
+
+    public Sprite flask;
+    public Sprite bas;
+    public Sprite syringe;
+    public Sprite level1;
+    public Sprite level2;
+    public Sprite level5;
+    public Sprite level10;
+    public Sprite NH3;
+    public Sprite CO2;
+    public Sprite CH4;
+    public Sprite CCl4;
+    public Sprite NCl4;
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        test1.GetComponent<Image>().sprite = notDone;
         
-        test1.GetComponent<Image>().sprite = notDone;
-        test2.GetComponent<Image>().sprite = notDone;
-        test3.GetComponent<Image>().sprite = notDone;
-        test4.GetComponent<Image>().sprite = notDone;
-        test5.GetComponent<Image>().sprite = notDone;
-        test6.GetComponent<Image>().sprite = notDone;
-        test7.GetComponent<Image>().sprite = notDone;
         
     }
 
@@ -38,68 +47,10 @@ public class AchievementController : MonoBehaviour
 
         if (PlayerPrefs.HasKey("test1"))
         {
-            test1.GetComponent<Image>().sprite = done;
+            test1.GetComponent<Image>().sprite = flask;
 
         }
-        else
-        {
-            test1.GetComponent<Image>().sprite = notDone;
-        }
-
-        if (PlayerPrefs.HasKey("test2"))
-        {
-            test2.GetComponent<Image>().sprite = done;
-
-        }
-        else
-        {
-            test2.GetComponent<Image>().sprite = notDone;
-        }
-        if (PlayerPrefs.HasKey("test3"))
-        {
-            test3.GetComponent<Image>().sprite = done;
-
-        }
-        else
-        {
-            test3.GetComponent<Image>().sprite = notDone;
-        }
-        if (PlayerPrefs.HasKey("test4"))
-        {
-            test4.GetComponent<Image>().sprite = done;
-
-        }
-        else
-        {
-            test4.GetComponent<Image>().sprite = notDone;
-        }
-        if (PlayerPrefs.HasKey("test5"))
-        {
-            test5.GetComponent<Image>().sprite = done;
-
-        }
-        else
-        {
-            test5.GetComponent<Image>().sprite = notDone;
-        }
-        if (PlayerPrefs.HasKey("test6"))
-        {
-            test6.GetComponent<Image>().sprite = done;
-
-        }
-        else
-        {
-            test6.GetComponent<Image>().sprite = notDone;
-        }
-        if (PlayerPrefs.HasKey("test7"))
-        {
-            test7.GetComponent<Image>().sprite = done;
-
-        }
-        else
-        {
-            test7.GetComponent<Image>().sprite = notDone;
-        }
+        
 
     }
     public void ChangeImage()

@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{F3B51DBE-4EC2-F64E-EF27-0EA114A1718F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ColorLerper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/InstructionManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Collision/CollisionAzote.cs" Line="137" Column="41" />
-      <File FileName="Assets/EffectExamples/Shared/Scripts/ParticleMenu.cs" Line="42" Column="44" />
-      <File FileName="Assets/Scripts/Collision/CollisionDispenser.cs" Line="123" Column="26" />
-      <File FileName="Assets/ColorLerper.cs" Line="8" Column="32" />
+      <File FileName="Assets/LevelController.cs" Line="25" Column="1" />
+      <File FileName="Assets/InstructionManager.cs" Line="17" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,14 +10,9 @@
           <Node name="ArLab Example" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="EffectExamples" expanded="True">
-                <Node name="Shared" expanded="True">
-                  <Node name="Scripts" expanded="True" />
-                </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="Collision" expanded="True" />
-                <Node name="Orbit" expanded="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
               <Node name="UnityARKitPlugin" expanded="True">
                 <Node name="Examples" expanded="True">
                   <Node name="ARKit2.0" expanded="True">
@@ -31,11 +24,12 @@
                   <Node name="iOS" expanded="True">
                     <Node name="UnityARKit" expanded="True">
                       <Node name="Helpers" expanded="True" />
+                      <Node name="NativeInterface" expanded="True" />
                     </Node>
                   </Node>
                 </Node>
               </Node>
-              <Node name="ColorLerper.cs" selected="True" />
+              <Node name="InstructionManager.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -44,7 +38,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="07a716c5-1745-4964-ac06-0fe29f7c45a1" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8d76b24d-d93b-4c4c-b7d7-b60099cd67a7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -15,6 +15,14 @@ TagManager:
   - Hydrogen
   - Chlorine
   - Carbon
+  - HCl
+  - Apple
+  - Cola
+  - Listerin
+  - Soda
+  - SodyumHidroksit
+  - Amonyak
+  - DetergentWater
   layers:
   - Default
   - TransparentFX
