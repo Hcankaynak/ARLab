@@ -1,8 +1,10 @@
 ﻿<Properties StartupConfiguration="{F3B51DBE-4EC2-F64E-EF27-0EA114A1718F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/InstructionManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/QuestionController.cs">
     <Files>
-      <File FileName="Assets/LevelController.cs" Line="25" Column="1" />
-      <File FileName="Assets/InstructionManager.cs" Line="17" Column="9" />
+      <File FileName="Assets/LevelController.cs" Line="32" Column="1" />
+      <File FileName="Assets/InstructionManager.cs" Line="30" Column="119" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="17" Column="6" />
+      <File FileName="Assets/QuestionController.cs" Line="12" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,7 +31,7 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="InstructionManager.cs" selected="True" />
+              <Node name="QuestionController.cs" selected="True" />
             </Node>
           </Node>
         </State>
