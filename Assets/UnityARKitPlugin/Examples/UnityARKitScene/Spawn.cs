@@ -16,6 +16,8 @@ public class Spawn : MonoBehaviour
     public GameObject SodyumHidroksit;
     public GameObject Amonyak;
     public GameObject DetergentWater;
+    public GameObject pH;
+
 
     public float maxRayDistance = 30.0f;
 
@@ -126,6 +128,10 @@ public class Spawn : MonoBehaviour
     public void selectDetergentWater()
     {
         selectedObject = DetergentWater;
+    }
+    public void selectpHScale()
+    {
+        selectedObject = pH;
     }
 
 }

@@ -19,19 +19,26 @@ public class QuestionController : MonoBehaviour
     public GameObject third3;
     public TextMeshProUGUI fourth;
     public GameObject forth4;
+    bool oneTime;
+    public GameObject Instructor;
+    public GameObject Home;
+    public GameObject Add;
 
     // Start is called before the first frame update
     void Start()
     {
         TrueAction = openTruePanel;
         FalseAction = openFalsePanel;
+        oneTime = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
 		if (PlayerPrefs.GetInt("CurrentLevel") == 1)
 		{
+            
             first.SetText("1");
             second.SetText("5");
             third.SetText("9");
@@ -45,6 +52,7 @@ public class QuestionController : MonoBehaviour
         }
 		else if (PlayerPrefs.GetInt("CurrentLevel") == 2)
 		{
+            oneTime = true;
             first.SetText("0,4");
             second.SetText("2,6");
             third.SetText("5,3");
@@ -56,6 +64,7 @@ public class QuestionController : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt("CurrentLevel") == 3)
         {
+            oneTime = true;
             first.SetText("2.02");
             second.SetText("5,45");
             third.SetText("9,90");
@@ -67,6 +76,7 @@ public class QuestionController : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt("CurrentLevel") == 4)
         {
+            oneTime = true;
             first.SetText("2,5");
             second.SetText("4,1");
             third.SetText("8,3");
@@ -78,6 +88,7 @@ public class QuestionController : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt("CurrentLevel") == 5)
         {
+            oneTime = true;
             first.SetText("1");
             second.SetText("3");
             third.SetText("11");
@@ -89,6 +100,7 @@ public class QuestionController : MonoBehaviour
         }
         else if (PlayerPrefs.GetInt("CurrentLevel") == 6)
         {
+            oneTime = true;
             first.SetText("2,5");
             second.SetText("4,1");
             third.SetText("9,7");
@@ -98,16 +110,36 @@ public class QuestionController : MonoBehaviour
             third3.GetComponent<Button>().onClick.AddListener(TrueAction);
             forth4.GetComponent<Button>().onClick.AddListener(FalseAction);
         }
+        else if (PlayerPrefs.GetInt("CurrentLevel") == 0)
+        {
+            oneTime = true;
+            Home.SetActive(true);
+            Add.SetActive(true);
+            Instructor.SetActive(false);
+        }
+
     }
     void openTruePanel()
     {
-        Debug.Log("Tavukcu");
-        True.SetActive(true);
-        //PlayerPrefs.SetInt("CurrentLevel", PlayerPrefs.GetInt("CurrentLevel") + 1);
+        if (oneTime)
+        {
+
+            True.SetActive(true);
+            int temp = PlayerPrefs.GetInt("CurrentLevel");
+            temp += 1;
+            PlayerPrefs.SetInt("CurrentLevel", temp);
+            
+            int level = PlayerPrefs.GetInt("LevelManager");
+            level += 1;
+            Debug.Log("Burasıııı" + level);
+            PlayerPrefs.SetInt("LevelManager", level);
+            oneTime = false;
+        }
+        
     }
     void openFalsePanel()
     {
-        Debug.Log("Tavukcu");
+
         False.SetActive(true);
     }
 }

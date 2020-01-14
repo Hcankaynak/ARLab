@@ -5,17 +5,37 @@ using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
+    public GameObject levels;
+    GameObject[] test;
     // Start is called before the first frame update
+
     void Start()
     {
+        if (!PlayerPrefs.HasKey("LevelManager"))
+        {
+            PlayerPrefs.SetInt("LevelManager", 1);
+        }
+        int temp = levels.transform.childCount;
+        for (int i = 0; i < temp; i++)
+        {
+            levels.transform.GetChild(i).GetComponent<Button>().interactable = false;
+        }
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        Debug.Log(PlayerPrefs.GetInt("LevelManager"));
+        int temp = PlayerPrefs.GetInt("LevelManager");
+        for(int i = 0;i< temp; i++)
+        {
+            levels.transform.GetChild(i).GetComponent<Button>().interactable = true;
+        }
+
     }
+
+    public void setLevel0() { PlayerPrefs.SetInt("CurrentLevel", 0); }
 
     public void setLevel1() {PlayerPrefs.SetInt("CurrentLevel", 1);}
 

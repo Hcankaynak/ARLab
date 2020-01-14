@@ -1,10 +1,14 @@
 ﻿<Properties StartupConfiguration="{F3B51DBE-4EC2-F64E-EF27-0EA114A1718F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/QuestionController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Collision/CollisionTarik.cs">
     <Files>
-      <File FileName="Assets/LevelController.cs" Line="32" Column="1" />
-      <File FileName="Assets/InstructionManager.cs" Line="30" Column="119" />
+      <File FileName="Assets/LevelController.cs" Line="10" Column="1" />
+      <File FileName="Assets/InstructionManager.cs" />
       <File FileName="Assets/Scripts/MainMenu.cs" Line="17" Column="6" />
-      <File FileName="Assets/QuestionController.cs" Line="12" Column="9" />
+      <File FileName="Assets/QuestionController.cs" Line="119" Column="10" />
+      <File FileName="Assets/Scripts/Collision/CollisionDispenser.cs" Line="10" Column="13" />
+      <File FileName="Assets/UnityARKitPlugin/Examples/UnityARKitScene/Spawn.cs" Line="135" Column="6" />
+      <File FileName="Assets/Scripts/Collision/CollisionLitmusPaper.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Collision/CollisionTarik.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +18,11 @@
               <Node name="EffectExamples" expanded="True">
                 <Node name="Shared" expanded="True" />
               </Node>
-              <Node name="Scripts" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Collision" expanded="True">
+                  <Node name="CollisionTarik.cs" selected="True" />
+                </Node>
+              </Node>
               <Node name="UnityARKitPlugin" expanded="True">
                 <Node name="Examples" expanded="True">
                   <Node name="ARKit2.0" expanded="True">
@@ -31,7 +39,6 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="QuestionController.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -40,7 +47,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8d76b24d-d93b-4c4c-b7d7-b60099cd67a7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="07580f9b-798b-4733-99da-eac28e5064a0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
