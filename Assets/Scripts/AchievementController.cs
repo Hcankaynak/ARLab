@@ -5,19 +5,8 @@ using UnityEngine.UI;
 
 public class AchievementController : MonoBehaviour
 {
-    public GameObject test1;
-    public GameObject test2;
-    public GameObject test3;
-    public GameObject test4;
-    public GameObject test5;
-    public GameObject test6;
-    public GameObject test7;
-    public GameObject test8;
-    public GameObject test9;
-    public GameObject test10;
-
-    
-
+    public GameObject achievements;
+    public Sprite unDone;
     public Sprite flask;
     public Sprite bas;
     public Sprite syringe;
@@ -37,7 +26,12 @@ public class AchievementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        int temp = achievements.transform.childCount;
+
+        for(int i = 0; i < temp; i++)
+        {
+            achievements.transform.GetChild(i).GetComponent<Image>().sprite = unDone;
+        }
         
     }
 
@@ -45,12 +39,55 @@ public class AchievementController : MonoBehaviour
     void Update()
     {
 
-        if (PlayerPrefs.HasKey("test1"))
+        if (PlayerPrefs.HasKey("flask"))
         {
-            test1.GetComponent<Image>().sprite = flask;
+            achievements.transform.GetChild(0).GetComponent<Image>().sprite = flask;
 
         }
-        
+        else if (PlayerPrefs.HasKey("base"))
+        {
+            achievements.transform.GetChild(1).GetComponent<Image>().sprite = bas;
+        }
+        else if (PlayerPrefs.HasKey("syringe"))
+        {
+            achievements.transform.GetChild(2).GetComponent<Image>().sprite = syringe;
+        }
+        else if (PlayerPrefs.HasKey("level1"))
+        {
+            achievements.transform.GetChild(3).GetComponent<Image>().sprite = level1;
+        }
+        else if (PlayerPrefs.HasKey("level2"))
+        {
+            achievements.transform.GetChild(4).GetComponent<Image>().sprite = level2;
+        }
+        else if (PlayerPrefs.HasKey("level5"))
+        {
+            achievements.transform.GetChild(5).GetComponent<Image>().sprite = level5;
+        }
+        else if (PlayerPrefs.HasKey("level10"))
+        {
+            achievements.transform.GetChild(6).GetComponent<Image>().sprite = level10;
+        }
+        else if (PlayerPrefs.HasKey("NH3"))
+        {
+            achievements.transform.GetChild(7).GetComponent<Image>().sprite = NH3;
+        }
+        else if (PlayerPrefs.HasKey("CO2"))
+        {
+            achievements.transform.GetChild(8).GetComponent<Image>().sprite = CO2;
+        }
+        else if (PlayerPrefs.HasKey("CH4"))
+        {
+            achievements.transform.GetChild(9).GetComponent<Image>().sprite = CH4;
+        }
+        else if (PlayerPrefs.HasKey("CCl4"))
+        {
+            achievements.transform.GetChild(10).GetComponent<Image>().sprite = CCl4;
+        }
+        else if (PlayerPrefs.HasKey("NCl3"))
+        {
+            achievements.transform.GetChild(11).GetComponent<Image>().sprite = NCl4;
+        }
 
     }
     public void ChangeImage()

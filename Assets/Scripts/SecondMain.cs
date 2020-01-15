@@ -9,6 +9,7 @@ public class SecondMain : MonoBehaviour
     public GameObject Azote;
     public GameObject Chlorine;
     public GameObject Hydrogen;
+    public GameObject Carbon;
     public GameObject select;
 
     public float maxRayDistances = 30.0f;
@@ -62,6 +63,10 @@ public class SecondMain : MonoBehaviour
     public void selectChlorine()
     {
         select = Chlorine;
+    }
+    public void selectCarbon()
+    {
+        select = Carbon;
     }
 
 }

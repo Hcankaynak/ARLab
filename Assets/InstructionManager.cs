@@ -21,78 +21,79 @@ public class InstructionManager : MonoBehaviour
     void Update()
     {
         
-        if (PlayerPrefs.HasKey("CurrentLevel"))
+        if (PlayerPrefs.HasKey("CurrentLevel2"))
         {
-            if (PlayerPrefs.GetInt("CurrentLevel") == 1)
+            if (PlayerPrefs.GetInt("CurrentLevel2") == 1)
             {
 
                 Welcome.GetComponent<TextMeshProUGUI>().SetText("Welcome to Level 1");
-                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Hydrogen chloride\n" +
+                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Water\n" +
                     "2. You can start with pressing " + " button at right bottom corner\n" +
-                    "3. First you need to create correct flask then\n" +
-                    "4. Create a syringe to take sample\n" +
-                    "5. Finally Create a litmus paper and test your sample after you are sure press the top right button to answer the question.\n"+
-                    "6. Have fun good luck, we will see at ending this experiment.");
+                    "3. First you need to create correct atoms then\n" +
+                    "4. Connect correct atoms between\n" +
+                    "5. Finally Create press play button at top right corner if you do it right you will pass to next level.\n"+
+                    "6. Have fun good luck!");
             }
-            else if (PlayerPrefs.GetInt("CurrentLevel") == 2)
+            else if (PlayerPrefs.GetInt("CurrentLevel2") == 2)
             {
                 Welcome.GetComponent<TextMeshProUGUI>().SetText("Welcome to Level 2");
-                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Cola\n" +
+                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Methane\n" +
                     "2. You can start with pressing " + " button at right bottom corner\n" +
-                    "3. First you need to create correct flask then\n" +
-                    "4. Create a syringe to take sample\n" +
-                    "5. Finally Create a litmus paper and test your sample after you are sure press the top right button to answer the question.\n" +
-                    "6. Have fun good luck, we will see at ending this experiment.");
+                    "3. First you need to create correct atoms then\n" +
+                    "4. Connect correct atoms between\n" +
+                    "5. Finally Create press play button at top right corner if you do it right you will pass to next level.\n" +
+                    "6. Have fun good luck!");
             }
-            else if (PlayerPrefs.GetInt("CurrentLevel") == 3)
+            else if (PlayerPrefs.GetInt("CurrentLevel2") == 3)
             {
                 Welcome.GetComponent<TextMeshProUGUI>().SetText("Welcome to Level 3");
-                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Listerin\n" +
+                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Hydrogen Cloride\n" +
                     "2. You can start with pressing " + " button at right bottom corner\n" +
-                    "3. First you need to create correct flask then\n" +
-                    "4. Create a syringe to take sample\n" +
-                    "5. Finally Create a litmus paper and test your sample after you are sure press the top right button to answer the question.\n" +
-                    "6. Have fun good luck, we will see at ending this experiment.");
+                    "3. First you need to create correct atoms then\n" +
+                    "4. Connect correct atoms between\n" +
+                    "5. Finally Create press play button at top right corner if you do it right you will pass to next level.\n" +
+                    "6. Have fun good luck!");
             }
-            else if (PlayerPrefs.GetInt("CurrentLevel") == 4)
+            else if (PlayerPrefs.GetInt("CurrentLevel2") == 4)
             {
                 Welcome.GetComponent<TextMeshProUGUI>().SetText("Welcome to Level 4");
-                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Soda\n" +
+                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Ammonia\n" +
                     "2. You can start with pressing " + " button at right bottom corner\n" +
-                    "3. First you need to create correct flask then\n" +
-                    "4. Create a syringe to take sample\n" +
-                    "5. Finally Create a litmus paper and test your sample after you are sure press the top right button to answer the question.\n" +
-                    "6. Have fun good luck, we will see at ending this experiment.");
+                    "3. First you need to create correct atoms then\n" +
+                    "4. Connect correct atoms between\n" +
+                    "5. Finally Create press play button at top right corner if you do it right you will pass to next level.\n" +
+                    "6. Have fun good luck!");
             }
-            else if (PlayerPrefs.GetInt("CurrentLevel") == 5)
+            else if (PlayerPrefs.GetInt("CurrentLevel2") == 5)
             {
                 Welcome.GetComponent<TextMeshProUGUI>().SetText("Welcome to Level 5");
-                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create an Ammonia\n" +
+                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Carbon TetraChloride\n" +
                     "2. You can start with pressing " + " button at right bottom corner\n" +
-                    "3. First you need to create correct flask then\n" +
-                    "4. Create a syringe to take sample\n" +
-                    "5. Finally Create a litmus paper and test your sample after you are sure press the top right button to answer the question.\n" +
-                    "6. Have fun good luck, we will see at ending this experiment.");
+                    "3. First you need to create correct atoms then\n" +
+                    "4. Connect correct atoms between\n" +
+                    "5. Finally Create press play button at top right corner if you do it right you will pass to next level.\n" +
+                    "6. Have fun good luck!");
             }
-            else if (PlayerPrefs.GetInt("CurrentLevel") == 6)
+            else if (PlayerPrefs.GetInt("CurrentLevel2") == 6)
             {
                 Welcome.GetComponent<TextMeshProUGUI>().SetText("Welcome to Level 6");
-                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Detergent Water\n" +
+                Description.GetComponent<TextMeshProUGUI>().SetText("1. In this chapter we want you to the create a Dichloride Monoxide\n" +
                     "2. You can start with pressing " + " button at right bottom corner\n" +
-                    "3. First you need to create correct flask then\n" +
-                    "4. Create a syringe to take sample\n" +
-                    "5. Finally Create a litmus paper and test your sample after you are sure press the top right button to answer the question.\n" +
-                    "6. Have fun good luck, we will see at ending this experiment.");
+                    "3. First you need to create correct atoms then\n" +
+                    "4. Connect correct atoms between\n" +
+                    "5. Finally Create press play button at top right corner if you do it right you will pass to next level.\n" +
+                    "6. Have fun good luck!");
             }
-            else if (PlayerPrefs.GetInt("CurrentLevel") == 7)
+            else if (PlayerPrefs.GetInt("CurrentLevel2") == 0)
             {
-                Welcome.GetComponent<TextMeshProUGUI>().SetText("");
-                Description.GetComponent<TextMeshProUGUI>().SetText("");
+                Welcome.GetComponent<TextMeshProUGUI>().SetText("Welcome to Free Mode");
+                Description.GetComponent<TextMeshProUGUI>().SetText("You can do whatever you want in here.");
             }
         }
         else
         {
-
+            InstructorPanel.SetActive(true);
+            Debug.Log("else");
         }
     }
 }

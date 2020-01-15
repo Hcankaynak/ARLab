@@ -16,7 +16,7 @@ GameObject:
   m_Layer: 8
   m_Name: Plane
   m_TagString: Surface
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: bbe65e6f8cf30498092e966e8da5b861, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -73,7 +73,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e4d0d4738790442fe8612581e85c7a16, type: 2}
+  - {fileID: 2100000, guid: 18a97d33bee394898afa3b0421333891, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,7 +118,7 @@ GameObject:
   m_Layer: 8
   m_Name: debugPlanePrefab
   m_TagString: Surface
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: bbe65e6f8cf30498092e966e8da5b861, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

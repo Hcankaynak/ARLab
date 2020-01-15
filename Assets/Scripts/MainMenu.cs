@@ -23,12 +23,6 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    private void Update()
-    {
-        if (PlayerPrefs.HasKey("achi"))
-        {
-            first.SetActive(false);
-        }
-    }
+    
 
 }

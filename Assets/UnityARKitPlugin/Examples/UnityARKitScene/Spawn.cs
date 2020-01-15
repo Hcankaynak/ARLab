@@ -51,33 +51,29 @@ public class Spawn : MonoBehaviour
                     {
                         if(selectedObject == syringe)
                         {
-                            GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.05f, 0), transform.rotation);
+                            GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.0825f, 0), transform.rotation);
                         }
                         else
                         {
-                            GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.5f, 0), transform.rotation);
+                            GameObject go = Instantiate(selectedObject, hit.point + new Vector3(0, 0.0005f, 0), transform.rotation);
                         }
                        
                         if(selectedObject == HCl)
                         {
-                            PlayerPrefs.SetInt("test1", 1);
+                            PlayerPrefs.SetInt("flask", 1);
                             Debug.Log("new achievement");
                         }
                         else if (selectedObject == Apple)
                         {
-                            PlayerPrefs.SetInt("test2", 1);
-                            Debug.Log("new achievement");
-                        }
-                        else if (selectedObject == litmusPaper)
-                        {
-                            PlayerPrefs.SetInt("test3", 1);
+                            PlayerPrefs.SetInt("base", 1);
                             Debug.Log("new achievement");
                         }
                         else if (selectedObject == syringe)
                         {
-                            PlayerPrefs.SetInt("test4", 1);
+                            PlayerPrefs.SetInt("syringe", 1);
                             Debug.Log("new achievement");
                         }
+                        
                         selectedObject = null;
                         
                     }

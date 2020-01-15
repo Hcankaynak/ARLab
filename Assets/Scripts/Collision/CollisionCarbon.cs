@@ -38,27 +38,28 @@ public class CollisionCarbon : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log(gam2);
         if (gam1)
         {
             line1.SetPosition(0, transform.position);
             line1.SetPosition(1, gam1.transform.position);
         }
-        else if (gam2)
+        if (gam2)
         {
-
-            line2.SetPosition(0, transform.position);
-            line2.SetPosition(1, gam2.transform.position);
+            Debug.Log("asdf");
+            line1.SetPosition(2, transform.position);
+            line1.SetPosition(3, gam2.transform.position);
             
         }
-        else if (gam3)
+        if (gam3)
         {
-            line3.SetPosition(0, transform.position);
-            line3.SetPosition(1, gam3.transform.position);
+            line1.SetPosition(4, transform.position);
+            line1.SetPosition(5, gam3.transform.position);
         }
-        else if (gam4)
+        if (gam4)
         {
-            line4.SetPosition(0, transform.position);
-            line4.SetPosition(1, gam4.transform.position);
+            line1.SetPosition(6, transform.position);
+            line1.SetPosition(7, gam4.transform.position);
         }
 
 
@@ -86,9 +87,9 @@ public class CollisionCarbon : MonoBehaviour
                     connection1 = false;
                     line1 = gameObject.AddComponent<LineRenderer>();
                     // Set the width of the Line Renderer
-                    line1.SetWidth(0.05F, 0.05F);
+                    line1.SetWidth(0.02F, 0.02F);
                     // Set the number of vertex fo the Line Renderer
-                    line1.SetVertexCount(2);
+                    line1.positionCount = 2;
                     line1.material.color = Color.black;
                     line1.SetPosition(0, transform.position);
                     line1.SetPosition(1, collision.gameObject.transform.position);
@@ -106,14 +107,14 @@ public class CollisionCarbon : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection2 = false;
-                    line2 = gameObject.AddComponent<LineRenderer>();
+
                     // Set the width of the Line Renderer
-                    line2.SetWidth(0.05F, 0.05F);
+
                     // Set the number of vertex fo the Line Renderer
-                    line2.SetVertexCount(2);
-                    line2.material.color = Color.black;
-                    line2.SetPosition(0, transform.position);
-                    line2.SetPosition(1, collision.gameObject.transform.position);
+
+                    line1.positionCount = 4;
+                    line1.SetPosition(2, transform.position);
+                    line1.SetPosition(3, collision.gameObject.transform.position);
                     gam2 = collision.gameObject;
 
                 }
@@ -126,14 +127,11 @@ public class CollisionCarbon : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection3 = false;
-                    line3 = gameObject.AddComponent<LineRenderer>();
-                    // Set the width of the Line Renderer
-                    line3.SetWidth(0.05F, 0.05F);
-                    // Set the number of vertex fo the Line Renderer
-                    line3.SetVertexCount(2);
-                    line3.material.color = Color.black;
-                    line3.SetPosition(0, transform.position);
-                    line3.SetPosition(1, collision.gameObject.transform.position);
+
+
+                    line1.positionCount = 6;
+                    line1.SetPosition(4, transform.position);
+                    line1.SetPosition(5, collision.gameObject.transform.position);
                     gam3 = collision.gameObject;
                 }
                 else if (connection4)
@@ -145,14 +143,10 @@ public class CollisionCarbon : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection4 = false;
-                    line4 = gameObject.AddComponent<LineRenderer>();
-                    // Set the width of the Line Renderer
-                    line4.SetWidth(0.05F, 0.05F);
-                    // Set the number of vertex fo the Line Renderer
-                    line4.SetVertexCount(2);
-                    line4.material.color = Color.black;
-                    line4.SetPosition(0, transform.position);
-                    line4.SetPosition(1, collision.gameObject.transform.position);
+
+                    line1.positionCount = 8;
+                    line1.SetPosition(6, transform.position);
+                    line1.SetPosition(7, collision.gameObject.transform.position);
                     gam4 = collision.gameObject;
                 }
 
@@ -165,15 +159,15 @@ public class CollisionCarbon : MonoBehaviour
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
-                    fixedJoint.anchor = new Vector3(2, 0, 2);
+                    fixedJoint.anchor = new Vector3(2, 0, 0);
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection1 = false;
                     line1 = gameObject.AddComponent<LineRenderer>();
                     // Set the width of the Line Renderer
-                    line1.SetWidth(0.05F, 0.05F);
+                    line1.SetWidth(0.02F, 0.02F);
                     // Set the number of vertex fo the Line Renderer
-                    line1.SetVertexCount(2);
+                    line1.positionCount = 2;
                     line1.material.color = Color.black;
                     line1.SetPosition(0, transform.position);
                     line1.SetPosition(1, collision.gameObject.transform.position);
@@ -186,18 +180,18 @@ public class CollisionCarbon : MonoBehaviour
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
-                    fixedJoint.anchor = new Vector3(-2, 0, 2);
+                    fixedJoint.anchor = new Vector3(-2, 0, 0);
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection2 = false;
-                    line2 = gameObject.AddComponent<LineRenderer>();
+
                     // Set the width of the Line Renderer
-                    line2.SetWidth(0.05F, 0.05F);
+
                     // Set the number of vertex fo the Line Renderer
-                    line2.SetVertexCount(2);
-                    line2.material.color = Color.black;
-                    line2.SetPosition(0, transform.position);
-                    line2.SetPosition(1, collision.gameObject.transform.position);
+
+                    line1.positionCount = 4;
+                    line1.SetPosition(2, transform.position);
+                    line1.SetPosition(3, collision.gameObject.transform.position);
                     gam2 = collision.gameObject;
 
                 }
@@ -210,14 +204,11 @@ public class CollisionCarbon : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection3 = false;
-                    line3 = gameObject.AddComponent<LineRenderer>();
-                    // Set the width of the Line Renderer
-                    line3.SetWidth(0.05F, 0.05F);
-                    // Set the number of vertex fo the Line Renderer
-                    line3.SetVertexCount(2);
-                    line3.material.color = Color.black;
-                    line3.SetPosition(0, transform.position);
-                    line3.SetPosition(1, collision.gameObject.transform.position);
+
+
+                    line1.positionCount = 6;
+                    line1.SetPosition(4, transform.position);
+                    line1.SetPosition(5, collision.gameObject.transform.position);
                     gam3 = collision.gameObject;
                 }
                 else if (connection4)
@@ -229,14 +220,10 @@ public class CollisionCarbon : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection4 = false;
-                    line4 = gameObject.AddComponent<LineRenderer>();
-                    // Set the width of the Line Renderer
-                    line4.SetWidth(0.05F, 0.05F);
-                    // Set the number of vertex fo the Line Renderer
-                    line4.SetVertexCount(2);
-                    line4.material.color = Color.black;
-                    line4.SetPosition(0, transform.position);
-                    line4.SetPosition(1, collision.gameObject.transform.position);
+
+                    line1.positionCount = 8;
+                    line1.SetPosition(6, transform.position);
+                    line1.SetPosition(7, collision.gameObject.transform.position);
                     gam4 = collision.gameObject;
                 }
             }

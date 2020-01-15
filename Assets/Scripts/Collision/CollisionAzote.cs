@@ -37,16 +37,16 @@ public class CollisionAzote : MonoBehaviour
             line1.SetPosition(0, transform.position);
             line1.SetPosition(1, gam1.transform.position);
         }
-        else if (gam2)
+        if (gam2)
         {
 
-            line2.SetPosition(0, transform.position);
-            line2.SetPosition(1, gam2.transform.position);
+            line1.SetPosition(2, transform.position);
+            line1.SetPosition(3, gam2.transform.position);
         }
-        else if (gam3)
+        if (gam3)
         {
-            line3.SetPosition(0, transform.position);
-            line3.SetPosition(1, gam3.transform.position);
+            line1.SetPosition(4, transform.position);
+            line1.SetPosition(5, gam3.transform.position);
         }
         
 
@@ -71,9 +71,9 @@ public class CollisionAzote : MonoBehaviour
                     connection1 = false;
                     line1 = gameObject.AddComponent<LineRenderer>();
                     // Set the width of the Line Renderer
-                    line1.SetWidth(0.05F, 0.05F);
+                    line1.SetWidth(0.03F, 0.03F);
                     // Set the number of vertex fo the Line Renderer
-                    line1.SetVertexCount(2);
+                    line1.positionCount = 2;
                     line1.material.color = Color.black;
                     line1.SetPosition(0, transform.position);
                     line1.SetPosition(1, collision.gameObject.transform.position);
@@ -91,14 +91,16 @@ public class CollisionAzote : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection2 = false;
-                    line2 = gameObject.AddComponent<LineRenderer>();
+
                     // Set the width of the Line Renderer
-                    line2.SetWidth(0.05F, 0.05F);
+
                     // Set the number of vertex fo the Line Renderer
-                    line2.SetVertexCount(2);
-                    line2.material.color = Color.black;
-                    line2.SetPosition(0, transform.position);
-                    line2.SetPosition(1, collision.gameObject.transform.position);
+
+
+                    line1.positionCount = 4;
+
+                    line1.SetPosition(2, transform.position);
+                    line1.SetPosition(3, collision.gameObject.transform.position);
                     gam2 = collision.gameObject;
 
                 }
@@ -111,14 +113,17 @@ public class CollisionAzote : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection3 = false;
-                    line3 = gameObject.AddComponent<LineRenderer>();
+
                     // Set the width of the Line Renderer
-                    line3.SetWidth(0.05F, 0.05F);
+
                     // Set the number of vertex fo the Line Renderer
-                    line3.SetVertexCount(2);
-                    line3.material.color = Color.black;
-                    line3.SetPosition(0, transform.position);
-                    line3.SetPosition(1, collision.gameObject.transform.position);
+
+
+                    line1.positionCount = 6;
+
+                    line1.SetPosition(4, transform.position);
+                    line1.SetPosition(5, collision.gameObject.transform.position);
+                    
                     gam3 = collision.gameObject;
                 }
 
@@ -137,10 +142,11 @@ public class CollisionAzote : MonoBehaviour
                     connection1 = false;
                     line1 = gameObject.AddComponent<LineRenderer>();
                     // Set the width of the Line Renderer
-                    line1.SetWidth(0.05F, 0.05F);
+                    line1.SetWidth(0.03F, 0.03F);
                     // Set the number of vertex fo the Line Renderer
-                    line1.SetVertexCount(2);
+                    line1.positionCount = 2;
                     line1.material.color = Color.black;
+
                     line1.SetPosition(0, transform.position);
                     line1.SetPosition(1, collision.gameObject.transform.position);
                     gam1 = collision.gameObject;
@@ -156,14 +162,14 @@ public class CollisionAzote : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection2 = false;
-                    line2 = gameObject.AddComponent<LineRenderer>();
+
                     // Set the width of the Line Renderer
-                    line2.SetWidth(0.05F, 0.05F);
+
                     // Set the number of vertex fo the Line Renderer
-                    line2.SetVertexCount(2);
-                    line2.material.color = Color.black;
-                    line2.SetPosition(0, transform.position);
-                    line2.SetPosition(1, collision.gameObject.transform.position);
+                    line1.positionCount = 4;
+                    line1.SetPosition(2, transform.position);
+                    line1.SetPosition(3, collision.gameObject.transform.position);
+                    
                     gam2 = collision.gameObject;
 
                 }
@@ -176,14 +182,14 @@ public class CollisionAzote : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection3 = false;
-                    line3 = gameObject.AddComponent<LineRenderer>();
+
                     // Set the width of the Line Renderer
-                    line3.SetWidth(0.05F, 0.05F);
+
                     // Set the number of vertex fo the Line Renderer
-                    line3.SetVertexCount(2);
-                    line3.material.color = Color.black;
-                    line3.SetPosition(0, transform.position);
-                    line3.SetPosition(1, collision.gameObject.transform.position);
+                    line1.positionCount = 6;
+
+                    line1.SetPosition(4, transform.position);
+                    line1.SetPosition(5, collision.gameObject.transform.position);
                     gam3 = collision.gameObject;
                 }
             }

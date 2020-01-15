@@ -9,7 +9,10 @@ using UnityEngine;
 public class DragObject : MonoBehaviour
 
 {
-
+    private void Start()
+    {
+        gameObject.GetComponent<MeshRenderer>().material.renderQueue += 10;
+    }
     private Vector3 mOffset;
 
     public LayerMask layerMask;

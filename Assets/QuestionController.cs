@@ -23,6 +23,7 @@ public class QuestionController : MonoBehaviour
     public GameObject Instructor;
     public GameObject Home;
     public GameObject Add;
+    public GameObject QuestionPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -123,7 +124,8 @@ public class QuestionController : MonoBehaviour
     {
         if (oneTime)
         {
-
+            PlayerPrefs.SetInt("level2", 4);
+            QuestionPanel.SetActive(false);
             True.SetActive(true);
             int temp = PlayerPrefs.GetInt("CurrentLevel");
             temp += 1;
@@ -139,7 +141,7 @@ public class QuestionController : MonoBehaviour
     }
     void openFalsePanel()
     {
-
+        QuestionPanel.SetActive(false);
         False.SetActive(true);
     }
 }

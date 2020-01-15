@@ -23,7 +23,8 @@ public class CollisionDispenser : MonoBehaviour
     {
         if (chemicals.Contains((collision.gameObject.tag)))
         {
-
+            gameObject.GetComponent<DragObject>().enabled = false;
+            collision.gameObject.GetComponent<DragObject>().enabled = false;
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             float height = collision.gameObject.GetComponent<MeshRenderer>().bounds.size.y;
             Vector3 v = gameObject.transform.position;
@@ -77,6 +78,8 @@ public class CollisionDispenser : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
             }
 
+            gameObject.GetComponent<DragObject>().enabled = true;
+            collision.gameObject.GetComponent<DragObject>().enabled = true;
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
             switch (collision.gameObject.tag)
@@ -106,12 +109,14 @@ public class CollisionDispenser : MonoBehaviour
                     pH = 13.5f;
                     break;
             }
-
         }
 
         else if (collision.gameObject.tag == "LitmusPaper")
         {
+            gameObject.GetComponent<DragObject>().enabled = false;
+            collision.gameObject.GetComponent<DragObject>().enabled = false;
             Debug.Log("Litmus paper work");
+            float height = collision.gameObject.GetComponent<MeshRenderer>().bounds.size.y;
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             Vector3 v = gameObject.transform.position;
             v.y += 0.12f;
@@ -132,7 +137,7 @@ public class CollisionDispenser : MonoBehaviour
             }
 
             Vector3 z = gameObject.transform.position;
-            z.y -= 0.105f;
+            z.y -= 0.12f - height;
             gameObject.GetComponent<PositionLerper>().newPosition = z;
             gameObject.GetComponent<PositionLerper>().activation = true;
             while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
@@ -172,6 +177,8 @@ public class CollisionDispenser : MonoBehaviour
             {
                 yield return new WaitForSeconds(0.1f);
             }
+            gameObject.GetComponent<DragObject>().enabled = true;
+            collision.gameObject.GetComponent<DragObject>().enabled = true;
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
