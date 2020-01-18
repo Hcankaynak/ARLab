@@ -18,6 +18,7 @@ public class CollisionCarbon : MonoBehaviour
     GameObject gam3;
     GameObject gam4;
     private int col;
+    public ParticleSystem efect;
 
     private void Start()
     {
@@ -65,7 +66,7 @@ public class CollisionCarbon : MonoBehaviour
 
 
     }
-    void OnCollisionEnter(UnityEngine.Collision collision)
+    IEnumerator OnCollisionEnter(UnityEngine.Collision collision)
     {
 
         if(col != collision.gameObject.GetInstanceID())
@@ -78,6 +79,8 @@ public class CollisionCarbon : MonoBehaviour
 
                 if (connection1)
                 {
+                    efect.transform.position = transform.position;
+                    efect.Play();
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
@@ -95,11 +98,15 @@ public class CollisionCarbon : MonoBehaviour
                     line1.SetPosition(1, collision.gameObject.transform.position);
 
                     gam1 = collision.gameObject;
+                    yield return new WaitForSeconds(0.8f);
+                    efect.Stop();
 
 
                 }
                 else if (connection2)
                 {
+                    efect.transform.position = transform.position;
+                    efect.Play();
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
@@ -116,10 +123,14 @@ public class CollisionCarbon : MonoBehaviour
                     line1.SetPosition(2, transform.position);
                     line1.SetPosition(3, collision.gameObject.transform.position);
                     gam2 = collision.gameObject;
+                    yield return new WaitForSeconds(0.8f);
+                    efect.Stop();
 
                 }
                 else if (connection3)
                 {
+                    efect.transform.position = transform.position;
+                    efect.Play();
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
@@ -127,6 +138,8 @@ public class CollisionCarbon : MonoBehaviour
                     fixedJoint.connectedAnchor = Vector3.zero;
                     gameObject.GetComponent<Rigidbody>().freezeRotation = true;
                     connection3 = false;
+                    yield return new WaitForSeconds(0.8f);
+                    efect.Stop();
 
 
                     line1.positionCount = 6;
@@ -136,6 +149,8 @@ public class CollisionCarbon : MonoBehaviour
                 }
                 else if (connection4)
                 {
+                    efect.transform.position = transform.position;
+                    efect.Play();
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
@@ -148,6 +163,8 @@ public class CollisionCarbon : MonoBehaviour
                     line1.SetPosition(6, transform.position);
                     line1.SetPosition(7, collision.gameObject.transform.position);
                     gam4 = collision.gameObject;
+                    yield return new WaitForSeconds(0.8f);
+                    efect.Stop();
                 }
 
 

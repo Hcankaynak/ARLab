@@ -63,7 +63,7 @@ public class checkTrueSecond : MonoBehaviour
                 //bura h20 demek
                 Debug.Log("H2O");
                 PlayerPrefs.SetInt("CurrentLevel2", 2);
-
+                PlayerPrefs.SetInt("LevelManager2", 2);
                 CorrectPanel.SetActive(true);
 
                 
@@ -72,7 +72,7 @@ public class checkTrueSecond : MonoBehaviour
             {
                 Debug.Log(PlayerPrefs.GetInt("CurrentLevel2"));
                 Debug.Log("Yok");
-                PlayerPrefs.SetInt("CurrentLevel2", 2);
+                
                 FalsePanel.SetActive(true);
             }
             tryout = "";
@@ -122,6 +122,7 @@ public class checkTrueSecond : MonoBehaviour
             {
                 //bura ch4 demek
                 PlayerPrefs.SetInt("CH4", 4);
+                PlayerPrefs.SetInt("LevelManager2", 3);
                 PlayerPrefs.SetInt("CurrentLevel2", 3);
                 CorrectPanel.SetActive(true);
                 
@@ -161,6 +162,7 @@ public class checkTrueSecond : MonoBehaviour
                 //bura hcl demek
                 PlayerPrefs.SetInt("level1", 4);
                 PlayerPrefs.SetInt("CurrentLevel2", 4);
+                PlayerPrefs.SetInt("LevelManager2", 4);
                 CorrectPanel.SetActive(true);
                 
             }
@@ -208,6 +210,7 @@ public class checkTrueSecond : MonoBehaviour
                 //bura nh3 demek
                 PlayerPrefs.SetInt("NH3", 1);
                 PlayerPrefs.SetInt("CurrentLevel2", 5);
+                PlayerPrefs.SetInt("LevelManager2", 5);
                 CorrectPanel.SetActive(true);
                 
             }
@@ -267,6 +270,7 @@ public class checkTrueSecond : MonoBehaviour
                 PlayerPrefs.SetInt("CCl4", 4);
                 CorrectPanel.SetActive(true);
                 PlayerPrefs.SetInt("CurrentLevel2", 6);
+                PlayerPrefs.SetInt("LevelManager2", 6);
             }
             else
             {
@@ -310,6 +314,7 @@ public class checkTrueSecond : MonoBehaviour
                 //bura cl2o demek
                 CorrectPanel.SetActive(true);
                 PlayerPrefs.SetInt("CurrentLevel2", 7);
+                PlayerPrefs.SetInt("LevelManager2", 7);
 
             }
             else

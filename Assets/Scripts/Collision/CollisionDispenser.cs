@@ -14,15 +14,13 @@ public class CollisionDispenser : MonoBehaviour
 
     // Start is called before the first frame update
 
-    IEnumerator waitForXSecond(float value)
-    {
-        yield return new WaitForSeconds(value);
-    }
-
     IEnumerator OnCollisionEnter(UnityEngine.Collision collision)
     {
+        Debug.Log("Collision Detectef");
         if (chemicals.Contains((collision.gameObject.tag)))
         {
+            collision.gameObject.GetComponent<MeshRenderer>().material.renderQueue += 10000;
+            Debug.Log("Size of Dispenser: " + gameObject.GetComponent<MeshRenderer>().bounds.size.y);
             gameObject.GetComponent<DragObject>().enabled = false;
             collision.gameObject.GetComponent<DragObject>().enabled = false;
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = true;
@@ -154,6 +152,66 @@ public class CollisionDispenser : MonoBehaviour
             float blueValue = phColors[low, 2] + ((phColors[low, 2] - phColors[high, 2]) * decimalPart);
             collision.gameObject.GetComponent<ColorLerper>().newColor = new Color(redValue / 255, greenValue / 255, blueValue / 255, 0);
             collision.gameObject.GetComponent<ColorLerper>().activation = true;
+            gameObject.GetComponent<PositionLerper>().newPosition = y;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            yield return new WaitForSeconds(0.3f);
+            collision.gameObject.transform.GetChild(0).GetComponent<ColorLerper>().newColor = new Color(redValue / 255, greenValue / 255, blueValue / 255, 0);
+            collision.gameObject.transform.GetChild(0).GetComponent<ColorLerper>().activation = true;
+            yield return new WaitForSeconds(0.3f);
+            collision.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<ColorLerper>().newColor = new Color(redValue / 255, greenValue / 255, blueValue / 255, 0);
+            collision.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<ColorLerper>().activation = true;
+            yield return new WaitForSeconds(0.3f);
+            collision.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<ColorLerper>().newColor = new Color(redValue / 255, greenValue / 255, blueValue / 255, 0);
+            collision.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<ColorLerper>().activation = true;
+
+            int counter = 0;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
+            {
+                Debug.Log(counter);
+                yield return new WaitForSeconds(0.1f);
+                counter++;
+            }
+
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+            v.y -= 0.12f;
+            v.x += (v.x - y.x);
+            v.z += (v.z - y.z);
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+
+
+            /*gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            yield return new WaitForSeconds(0.4f);
+            v.y -= 0.12f;
+            v.x += (v.x - y.x);
+            v.z += (v.z - y.z);
+            gameObject.GetComponent<PositionLerper>().newPosition = v;
+            gameObject.GetComponent<PositionLerper>().activation = true;
+            yield return new WaitForSeconds(0.2f);*/
+
+
+            /* collision.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<ColorLerper>().newColor = new Color(redValue / 255, greenValue / 255, blueValue / 255, 0);
+            collision.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<ColorLerper>().activation = true;
+            yield return new WaitForSeconds(5f);
+            collision.gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<ColorLerper>().newColor = new Color(redValue / 255, greenValue / 255, blueValue / 255, 0);
+            collision.gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<ColorLerper>().activation = true;
+            yield return new WaitForSeconds(5f);
+            
+            collision.gameObject.transform.parent.gameObject.GetComponent<ColorLerper>().newColor = new Color(redValue / 255, greenValue / 255, blueValue / 255, 0);
+            collision.gameObject.transform.parent.gameObject.GetComponent<ColorLerper>().activation = true;
+            yield return new WaitForSeconds(5f);
+            collision.gameObject.GetComponent<ColorLerper>().newColor = new Color(redValue/255, greenValue/255, blueValue/255, 0);
+            collision.gameObject.GetComponent<ColorLerper>().activation = true;
 
             gameObject.GetComponent<PositionLerper>().newPosition = y;
             gameObject.GetComponent<PositionLerper>().activation = true;
@@ -176,7 +234,7 @@ public class CollisionDispenser : MonoBehaviour
             while (gameObject.GetComponent<PositionLerper>().activation || gameObject.GetComponent<PositionLerper>().active)
             {
                 yield return new WaitForSeconds(0.1f);
-            }
+            }*/
             gameObject.GetComponent<DragObject>().enabled = true;
             collision.gameObject.GetComponent<DragObject>().enabled = true;
             collision.gameObject.GetComponent<Rigidbody>().isKinematic = false;

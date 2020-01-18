@@ -8,7 +8,7 @@ public class CollisionOxygen : MonoBehaviour
     public bool connection1;
     public bool connection2;
     private LineRenderer line1;
-
+    public ParticleSystem efect;
     GameObject gam1;
     GameObject gam2;
     private int col;
@@ -41,7 +41,7 @@ public class CollisionOxygen : MonoBehaviour
 
        
     }
-    void OnCollisionEnter(UnityEngine.Collision collision)
+    IEnumerator OnCollisionEnter(UnityEngine.Collision collision)
     {
         if(col != collision.gameObject.GetInstanceID())
         {
@@ -52,6 +52,8 @@ public class CollisionOxygen : MonoBehaviour
 
                 if (connection1)
                 {
+                    efect.transform.position = transform.position;
+                    efect.Play();
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
@@ -68,11 +70,14 @@ public class CollisionOxygen : MonoBehaviour
                     line1.SetPosition(0, transform.position);
                     line1.SetPosition(1, collision.gameObject.transform.position);
                     gam1 = collision.gameObject;
-
+                    yield return new WaitForSeconds(0.8f);
+                    efect.Stop();
 
                 }
                 else if (connection2)
                 {
+                    efect.transform.position = transform.position;
+                    efect.Play();
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
@@ -88,6 +93,8 @@ public class CollisionOxygen : MonoBehaviour
                     line1.SetPosition(3, collision.gameObject.transform.position);
 
                     gam2 = collision.gameObject;
+                    yield return new WaitForSeconds(0.8f);
+                    efect.Stop();
 
                 }
                 else
@@ -101,6 +108,8 @@ public class CollisionOxygen : MonoBehaviour
             {
                 if (connection1)
                 {
+                    efect.transform.position = transform.position;
+                    efect.Play();
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
@@ -118,11 +127,15 @@ public class CollisionOxygen : MonoBehaviour
                     line1.SetPosition(0, transform.position);
                     line1.SetPosition(1, collision.gameObject.transform.position);
                     gam1 = collision.gameObject;
+                    yield return new WaitForSeconds(0.8f);
+                    efect.Stop();
 
 
                 }
                 else if (connection2)
                 {
+                    efect.transform.position = transform.position;
+                    efect.Play();
                     FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
                     fixedJoint.connectedBody = collision.gameObject.GetComponent<Rigidbody>();
                     fixedJoint.autoConfigureConnectedAnchor = false;
@@ -134,7 +147,8 @@ public class CollisionOxygen : MonoBehaviour
                     line1.SetPosition(2, transform.position);
                     line1.SetPosition(3, collision.gameObject.transform.position);
                     gam2 = collision.gameObject;
-
+                    yield return new WaitForSeconds(0.8f);
+                    efect.Stop();
                 }
 
             }

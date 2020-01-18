@@ -1,17 +1,8 @@
 ﻿<Properties StartupConfiguration="{F3B51DBE-4EC2-F64E-EF27-0EA114A1718F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Collision/CollisionDispenser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Collision/CollisionOxygen.cs">
     <Files>
-      <File FileName="Assets/checkTrueSecond.cs" Line="66" Column="1" />
-      <File FileName="Assets/QuestionController.cs" />
-      <File FileName="Assets/Scripts/Collision/CollisionDispenser.cs" Line="18" Column="6" />
-      <File FileName="Assets/LevelController.cs" />
-      <File FileName="Assets/UnityARKitPlugin/Examples/UnityARKitScene/Spawn.cs" />
-      <File FileName="Assets/Scripts/AchievementController.cs" />
-      <File FileName="Assets/InstructionManager.cs" Line="90" Column="107" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="26" Column="5" />
-      <File FileName="Assets/Scripts/test1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameTimeAchievement.cs" Line="12" Column="9" />
-      <File FileName="Assets/Scripts/DragObject.cs" Line="12" Column="25" />
+      <File FileName="Assets/Scripts/AchievementController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Collision/CollisionOxygen.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,7 +14,7 @@
               </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="Collision" expanded="True">
-                  <Node name="CollisionDispenser.cs" selected="True" />
+                  <Node name="CollisionOxygen.cs" selected="True" />
                 </Node>
                 <Node name="Orbit" expanded="True" />
               </Node>
@@ -51,7 +42,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4a687e4a-8412-4748-815c-3ceb30302d71" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3dec3472-9159-40b0-b653-38eb33481863" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
